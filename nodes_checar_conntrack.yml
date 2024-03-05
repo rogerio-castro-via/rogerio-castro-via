@@ -1,0 +1,264 @@
+spawning "nsenter-y5ptz7" on "aks-admin-60269073-vmss00001m"
+pod "nsenter-y5ptz7" deleted
+Node: aks-admin-60269073-vmss00001m precisa de correção
+spawning "nsenter-iw7wb7" on "aks-admin-60269073-vmss00001n"
+Error from server (BadRequest): container "nsenter" in pod "nsenter-iw7wb7" is not available
+pod "nsenter-iw7wb7" deleted
+Node: aks-admin-60269073-vmss00001n precisa de correção
+spawning "nsenter-kss01u" on "aks-admin-60269073-vmss00001o"
+Error from server (BadRequest): container "nsenter" in pod "nsenter-kss01u" is not available
+pod "nsenter-kss01u" deleted
+Node: aks-admin-60269073-vmss00001o precisa de correção
+spawning "nsenter-1mbck6" on "aks-admin-60269073-vmss00001p"
+Error from server (BadRequest): container "nsenter" in pod "nsenter-1mbck6" is not available
+pod "nsenter-1mbck6" deleted
+Node: aks-admin-60269073-vmss00001p precisa de correção
+spawning "nsenter-9gbb9b" on "aks-consumerprec-98172331-vmss00005l"
+pod "nsenter-9gbb9b" deleted
+Node: aks-consumerprec-98172331-vmss00005l precisa de correção
+spawning "nsenter-acsz5t" on "aks-consumerprec-98172331-vmss000065"
+pod "nsenter-acsz5t" deleted
+Node: aks-consumerprec-98172331-vmss000065 precisa de correção
+spawning "nsenter-jfj1d3" on "aks-descontocb-30992440-vmss000032"
+pod "nsenter-jfj1d3" deleted
+Node: aks-descontocb-30992440-vmss000032 precisa de correção
+spawning "nsenter-hr3e8w" on "aks-descontocb-30992440-vmss000033"
+pod "nsenter-hr3e8w" deleted
+Node: aks-descontocb-30992440-vmss000033 precisa de correção
+spawning "nsenter-hjn2e5" on "aks-descontoex-40933848-vmss00004d"
+pod "nsenter-hjn2e5" deleted
+Node: aks-descontoex-40933848-vmss00004d precisa de correção
+spawning "nsenter-0ygynq" on "aks-descontoex-40933848-vmss00004e"
+Error from server (BadRequest): container "nsenter" in pod "nsenter-0ygynq" is not available
+pod "nsenter-0ygynq" deleted
+Node: aks-descontoex-40933848-vmss00004e precisa de correção
+spawning "nsenter-t645ze" on "aks-descontoex-40933848-vmss00004g"
+pod "nsenter-t645ze" deleted
+Node: aks-descontoex-40933848-vmss00004g precisa de correção
+spawning "nsenter-bep81v" on "aks-descontopf-40760746-vmss00004o"
+pod "nsenter-bep81v" deleted
+Node: aks-descontopf-40760746-vmss00004o precisa de correção
+spawning "nsenter-chphqz" on "aks-descontopf-40760746-vmss00004q"
+pod "nsenter-chphqz" deleted
+Node: aks-descontopf-40760746-vmss00004q precisa de correção
+spawning "nsenter-9yl28c" on "aks-descontopf-40760746-vmss00004r"
+pod "nsenter-9yl28c" deleted
+Node: aks-descontopf-40760746-vmss00004r precisa de correção
+spawning "nsenter-0aij93" on "aks-import-42556351-vmss000003"
+pod "nsenter-0aij93" deleted
+Node: aks-import-42556351-vmss000003 precisa de correção
+spawning "nsenter-1kmcss" on "aks-import-42556351-vmss000004"
+pod "nsenter-1kmcss" deleted
+Node: aks-import-42556351-vmss000004 precisa de correção
+spawning "nsenter-3kizig" on "aks-ingprecov2-42610654-vmss00000q"
+pod "nsenter-3kizig" deleted
+Node: aks-ingprecov2-42610654-vmss00000q precisa de correção
+spawning "nsenter-6zgh2d" on "aks-ingprecov2-42610654-vmss00000v"
+pod "nsenter-6zgh2d" deleted
+Node: aks-ingprecov2-42610654-vmss00000v precisa de correção
+spawning "nsenter-bkjbpd" on "aks-ingprecov2-42610654-vmss000013"
+pod "nsenter-bkjbpd" deleted
+Node: aks-ingprecov2-42610654-vmss000013 precisa de correção
+spawning "nsenter-p9aqil" on "aks-ingprecov2-42610654-vmss000014"
+pod "nsenter-p9aqil" deleted
+Node: aks-ingprecov2-42610654-vmss000014 precisa de correção
+spawning "nsenter-g03fid" on "aks-ingprecov2-42610654-vmss000019"
+pod "nsenter-g03fid" deleted
+Node: aks-ingprecov2-42610654-vmss000019 precisa de correção
+spawning "nsenter-5ax0rn" on "aks-ingressv2-18517587-vmss000002"
+pod "nsenter-5ax0rn" deleted
+Node: aks-ingressv2-18517587-vmss000002 precisa de correção
+spawning "nsenter-8cde8e" on "aks-ingressv2-18517587-vmss000004"
+pod "nsenter-8cde8e" deleted
+Node: aks-ingressv2-18517587-vmss000004 precisa de correção
+spawning "nsenter-9m8n0f" on "aks-ingressv2-18517587-vmss000005"
+pod "nsenter-9m8n0f" deleted
+Node: aks-ingressv2-18517587-vmss000005 precisa de correção
+spawning "nsenter-cw86bt" on "aks-ingressv2-18517587-vmss000007"
+pod "nsenter-cw86bt" deleted
+Node: aks-ingressv2-18517587-vmss000007 precisa de correção
+spawning "nsenter-2q0sr4" on "aks-ingressv2-18517587-vmss00000a"
+If you don't see a command prompt, try pressing enter.
+warning: couldn't attach to pod/nsenter-2q0sr4, falling back to streaming logs: unable to upgrade connection: container nsenter not found in pod nsenter-2q0sr4_api-preco-frete-comercial-prd
+pod "nsenter-2q0sr4" deleted
+Node: aks-ingressv2-18517587-vmss00000a precisa de correção
+spawning "nsenter-g09us6" on "aks-monitoring-31349014-vmss000000"
+pod "nsenter-g09us6" deleted
+Node: aks-monitoring-31349014-vmss000000 precisa de correção
+spawning "nsenter-v6is48" on "aks-monitoring-31349014-vmss000002"
+pod "nsenter-v6is48" deleted
+Node: aks-monitoring-31349014-vmss000002 precisa de correção
+spawning "nsenter-jmst95" on "aks-ofertcb-31020440-vmss00003f"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-jmst95" deleted
+Node: aks-ofertcb-31020440-vmss00003f precisa de correção
+spawning "nsenter-8gfwmz" on "aks-ofertcb-31020440-vmss00003h"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-8gfwmz" deleted
+Node: aks-ofertcb-31020440-vmss00003h precisa de correção
+spawning "nsenter-nbwbi2" on "aks-ofertcb-31020440-vmss00003l"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-nbwbi2" deleted
+Node: aks-ofertcb-31020440-vmss00003l precisa de correção
+spawning "nsenter-69owm4" on "aks-ofertcb-31020440-vmss00003q"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-69owm4" deleted
+Node: aks-ofertcb-31020440-vmss00003q precisa de correção
+spawning "nsenter-ykiqby" on "aks-ofertex-16531849-vmss00001e"
+If you don't see a command prompt, try pressing enter.
+warning: couldn't attach to pod/nsenter-ykiqby, falling back to streaming logs: unable to upgrade connection: container nsenter not found in pod nsenter-ykiqby_api-preco-frete-comercial-prd
+pod "nsenter-ykiqby" deleted
+Node: aks-ofertex-16531849-vmss00001e precisa de correção
+spawning "nsenter-va0luz" on "aks-ofertex-16531849-vmss00001k"
+pod "nsenter-va0luz" deleted
+Node: aks-ofertex-16531849-vmss00001k precisa de correção
+spawning "nsenter-vxcp7l" on "aks-ofertex-16531849-vmss000020"
+If you don't see a command prompt, try pressing enter.
+warning: couldn't attach to pod/nsenter-vxcp7l, falling back to streaming logs: unable to upgrade connection: container nsenter not found in pod nsenter-vxcp7l_api-preco-frete-comercial-prd
+pod "nsenter-vxcp7l" deleted
+Node: aks-ofertex-16531849-vmss000020 precisa de correção
+spawning "nsenter-320hln" on "aks-ofertpf-39716021-vmss00001p"
+pod "nsenter-320hln" deleted
+Node: aks-ofertpf-39716021-vmss00001p precisa de correção
+spawning "nsenter-xrwaqf" on "aks-ofertpf-39716021-vmss00001t"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-xrwaqf" deleted
+Node: aks-ofertpf-39716021-vmss00001t precisa de correção
+spawning "nsenter-rumvkg" on "aks-ofertpf-39716021-vmss000022"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-rumvkg" deleted
+Node: aks-ofertpf-39716021-vmss000022 precisa de correção
+spawning "nsenter-b26cnu" on "aks-pfretecb-14825288-vmss00004p"
+pod "nsenter-b26cnu" deleted
+Node: aks-pfretecb-14825288-vmss00004p precisa de correção
+spawning "nsenter-zwgtmu" on "aks-pfretecb-14825288-vmss00004w"
+pod "nsenter-zwgtmu" deleted
+spawning "nsenter-kjqnkf" on "aks-pfretecb-14825288-vmss000053"
+pod "nsenter-kjqnkf" deleted
+Node: aks-pfretecb-14825288-vmss000053 precisa de correção
+spawning "nsenter-gwkth4" on "aks-pfretecb-14825288-vmss000055"
+pod "nsenter-gwkth4" deleted
+Node: aks-pfretecb-14825288-vmss000055 precisa de correção
+spawning "nsenter-1lulgw" on "aks-pfreteex-26032672-vmss000037"
+pod "nsenter-1lulgw" deleted
+Node: aks-pfreteex-26032672-vmss000037 precisa de correção
+spawning "nsenter-ebn3t4" on "aks-pfreteex-26032672-vmss00003c"
+pod "nsenter-ebn3t4" deleted
+Node: aks-pfreteex-26032672-vmss00003c precisa de correção
+spawning "nsenter-v4p0b6" on "aks-pfretepf-16678708-vmss00002y"
+pod "nsenter-v4p0b6" deleted
+Node: aks-pfretepf-16678708-vmss00002y precisa de correção
+spawning "nsenter-6mujk8" on "aks-pfretepf-16678708-vmss00002z"
+pod "nsenter-6mujk8" deleted
+Node: aks-pfretepf-16678708-vmss00002z precisa de correção
+spawning "nsenter-b719it" on "aks-precocb-28428774-vmss0000ku"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-b719it" deleted
+Node: aks-precocb-28428774-vmss0000ku precisa de correção
+spawning "nsenter-f4snzp" on "aks-precocb-28428774-vmss0000kw"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-f4snzp" deleted
+Node: aks-precocb-28428774-vmss0000kw precisa de correção
+spawning "nsenter-m96ow6" on "aks-precocb-28428774-vmss0000kx"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-m96ow6" deleted
+Node: aks-precocb-28428774-vmss0000kx precisa de correção
+spawning "nsenter-v0tqre" on "aks-precocb-28428774-vmss0000ky"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-v0tqre" deleted
+Node: aks-precocb-28428774-vmss0000ky precisa de correção
+spawning "nsenter-008l2e" on "aks-precocb-28428774-vmss0000kz"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-008l2e" deleted
+Node: aks-precocb-28428774-vmss0000kz precisa de correção
+spawning "nsenter-4vfdls" on "aks-precocb-28428774-vmss0000l4"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-4vfdls" deleted
+Node: aks-precocb-28428774-vmss0000l4 precisa de correção
+spawning "nsenter-cw0wlv" on "aks-precocb-28428774-vmss0000l5"
+If you don't see a command prompt, try pressing enter.
+warning: couldn't attach to pod/nsenter-cw0wlv, falling back to streaming logs: Internal error occurred: error attaching to container: failed to load task: no running task found: task ef027243826780cc0fca840d8fecb8c083914ca26a2a587758273aee03eda57d not found: not found
+pod "nsenter-cw0wlv" deleted
+Node: aks-precocb-28428774-vmss0000l5 precisa de correção
+spawning "nsenter-cdxgct" on "aks-precoex-14733757-vmss00002a"
+pod "nsenter-cdxgct" deleted
+Node: aks-precoex-14733757-vmss00002a precisa de correção
+spawning "nsenter-qm05i6" on "aks-precoex-14733757-vmss00002b"
+If you don't see a command prompt, try pressing enter.
+warning: couldn't attach to pod/nsenter-qm05i6, falling back to streaming logs: unable to upgrade connection: container nsenter not found in pod nsenter-qm05i6_api-preco-frete-comercial-prd
+pod "nsenter-qm05i6" deleted
+Node: aks-precoex-14733757-vmss00002b precisa de correção
+spawning "nsenter-84ovlp" on "aks-precoex-14733757-vmss00002h"
+pod "nsenter-84ovlp" deleted
+Node: aks-precoex-14733757-vmss00002h precisa de correção
+spawning "nsenter-khk3e0" on "aks-precoex-14733757-vmss00002j"
+If you don't see a command prompt, try pressing enter.
+warning: couldn't attach to pod/nsenter-khk3e0, falling back to streaming logs: unable to upgrade connection: container nsenter not found in pod nsenter-khk3e0_api-preco-frete-comercial-prd
+pod "nsenter-khk3e0" deleted
+Node: aks-precoex-14733757-vmss00002j precisa de correção
+spawning "nsenter-vnh04s" on "aks-precoex-14733757-vmss00002k"
+pod "nsenter-vnh04s" deleted
+Node: aks-precoex-14733757-vmss00002k precisa de correção
+spawning "nsenter-fogmwc" on "aks-precofeedcb-21405579-vmss000012"
+pod "nsenter-fogmwc" deleted
+Node: aks-precofeedcb-21405579-vmss000012 precisa de correção
+spawning "nsenter-ekhxzy" on "aks-precofeedcb-21405579-vmss000016"
+pod "nsenter-ekhxzy" deleted
+Node: aks-precofeedcb-21405579-vmss000016 precisa de correção
+spawning "nsenter-1rzabc" on "aks-precofeedex-33717502-vmss00007c"
+pod "nsenter-1rzabc" deleted
+Node: aks-precofeedex-33717502-vmss00007c precisa de correção
+spawning "nsenter-5emb6m" on "aks-precofeedex-33717502-vmss00007f"
+pod "nsenter-5emb6m" deleted
+Node: aks-precofeedex-33717502-vmss00007f precisa de correção
+spawning "nsenter-84l4wf" on "aks-precofeedex-33717502-vmss00007i"
+pod "nsenter-84l4wf" deleted
+Node: aks-precofeedex-33717502-vmss00007i precisa de correção
+spawning "nsenter-49q9rm" on "aks-precofeedex-33717502-vmss00007o"
+pod "nsenter-49q9rm" deleted
+Node: aks-precofeedex-33717502-vmss00007o precisa de correção
+spawning "nsenter-cn4a2h" on "aks-precofeedex-33717502-vmss00007p"
+pod "nsenter-cn4a2h" deleted
+Node: aks-precofeedex-33717502-vmss00007p precisa de correção
+spawning "nsenter-iqpt3w" on "aks-precofeedex-33717502-vmss00007q"
+pod "nsenter-iqpt3w" deleted
+Node: aks-precofeedex-33717502-vmss00007q precisa de correção
+spawning "nsenter-1a2vry" on "aks-precofeedpf-67493341-vmss00000t"
+pod "nsenter-1a2vry" deleted
+Node: aks-precofeedpf-67493341-vmss00000t precisa de correção
+spawning "nsenter-nmrofh" on "aks-precofeedpf-67493341-vmss00000z"
+pod "nsenter-nmrofh" deleted
+Node: aks-precofeedpf-67493341-vmss00000z precisa de correção
+spawning "nsenter-t3w0jo" on "aks-precofeedpf-67493341-vmss00001d"
+pod "nsenter-t3w0jo" deleted
+Node: aks-precofeedpf-67493341-vmss00001d precisa de correção
+spawning "nsenter-5n8zwu" on "aks-precofeedpf-67493341-vmss00001i"
+pod "nsenter-5n8zwu" deleted
+Node: aks-precofeedpf-67493341-vmss00001i precisa de correção
+spawning "nsenter-8u524i" on "aks-precofeedpf-67493341-vmss00001n"
+pod "nsenter-8u524i" deleted
+Node: aks-precofeedpf-67493341-vmss00001n precisa de correção
+spawning "nsenter-hk0dvt" on "aks-precopfv2-28994614-vmss00000q"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-hk0dvt" deleted
+Node: aks-precopfv2-28994614-vmss00000q precisa de correção
+spawning "nsenter-3azny1" on "aks-precopfv2-28994614-vmss00000v"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-3azny1" deleted
+Node: aks-precopfv2-28994614-vmss00000v precisa de correção
+spawning "nsenter-cw1lrh" on "aks-precopfv2-28994614-vmss00000z"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-cw1lrh" deleted
+Node: aks-precopfv2-28994614-vmss00000z precisa de correção
+spawning "nsenter-rnzt38" on "aks-precopfv2-28994614-vmss000010"
+If you don't see a command prompt, try pressing enter.
+warning: couldn't attach to pod/nsenter-rnzt38, falling back to streaming logs: Internal error occurred: error attaching to container: container is in CONTAINER_EXITED state
+pod "nsenter-rnzt38" deleted
+Node: aks-precopfv2-28994614-vmss000010 precisa de correção
+spawning "nsenter-5u1m8d" on "aks-precopfv2-28994614-vmss000011"
+If you don't see a command prompt, try pressing enter.
+pod "nsenter-5u1m8d" deleted
+Node: aks-precopfv2-28994614-vmss000011 precisa de correção
+spawning "nsenter-aqto2u" on "aks-system-39005084-vmss000000"
+pod "nsenter-aqto2u" deleted
+spawning "nsenter-t2z20t" on "aks-system-39005084-vmss000001"
