@@ -1,0 +1,134 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: api-preco-b2c-prd
+    artifact.spinnaker.io/name: api-preco-pontofrio
+    artifact.spinnaker.io/type: kubernetes/deployment
+    artifact.spinnaker.io/version: ""
+    deployment.kubernetes.io/revision: "325"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"app.via.com.br/branch":"release/3.17","app.via.com.br/flag":"via","app.via.com.br/nexus-url":"https://nexus.viavarejo.com.br/repository/charts/api-preco-b2c/3.17-4/deploy-via-prd.yaml","app.via.com.br/project-name":"api-preco-b2c","app.via.com.br/repository":"api-preco-b2c","app.via.com.br/servicenow-task-number":"CHG0297997","app.via.com.br/spinnaker":"true","app.via.com.br/squad":"Preço","app.via.com.br/tribe":"Inteligência Comercial","app.via.com.br/version":"3.17-4","app.via.com.br/xl-release-start-date":"Mon Jan 08 17:40:07 BRT 2024","app.via.com.br/xl-release-title":"[Preço] api-preco-b2c - 3.17-4","artifact.spinnaker.io/location":"api-preco-b2c-prd","artifact.spinnaker.io/name":"api-preco-pontofrio","artifact.spinnaker.io/type":"kubernetes/deployment","artifact.spinnaker.io/version":"","moniker.spinnaker.io/application":"pricing","moniker.spinnaker.io/cluster":"deployment api-preco-pontofrio","strategy.spinnaker.io/versioned":"false","viavarejo.com.br/app":"api-preco","viavarejo.com.br/environment":"prd","viavarejo.com.br/team":"pricing"},"labels":{"app":"api-preco-pontofrio","app.kubernetes.io/deployed-by":"spinnaker-artifact-nexus","app.kubernetes.io/environment":"prd","app.kubernetes.io/managed-by":"spinnaker","app.kubernetes.io/name":"pricing","app.kubernetes.io/part-of":"api-preco-pontofrio","app.kubernetes.io/project-name":"api-preco-b2c","app.kubernetes.io/stage":"stable","app.kubernetes.io/version":"3.17-4"},"name":"api-preco-pontofrio","namespace":"api-preco-b2c-prd"},"spec":{"replicas":2,"selector":{"matchLabels":{"app":"api-preco-pontofrio"}},"strategy":{"rollingUpdate":{"maxSurge":"25%","maxUnavailable":"25%"},"type":"RollingUpdate"},"template":{"metadata":{"annotations":{"app.via.com.br/branch":"release/3.17","app.via.com.br/flag":"via","app.via.com.br/nexus-url":"https://nexus.viavarejo.com.br/repository/charts/api-preco-b2c/3.17-4/deploy-via-prd.yaml","app.via.com.br/project-name":"api-preco-b2c","app.via.com.br/repository":"api-preco-b2c","app.via.com.br/servicenow-task-number":"CHG0297997","app.via.com.br/spinnaker":"true","app.via.com.br/squad":"Preço","app.via.com.br/tribe":"Inteligência Comercial","app.via.com.br/version":"3.17-4","app.via.com.br/xl-release-start-date":"Mon Jan 08 17:40:07 BRT 2024","app.via.com.br/xl-release-title":"[Preço] api-preco-b2c - 3.17-4","artifact.spinnaker.io/location":"api-preco-b2c-prd","artifact.spinnaker.io/name":"api-preco-pontofrio","artifact.spinnaker.io/type":"kubernetes/deployment","artifact.spinnaker.io/version":"","moniker.spinnaker.io/application":"pricing","moniker.spinnaker.io/cluster":"deployment api-preco-pontofrio","strategy.spinnaker.io/versioned":"false","viavarejo.com.br/app":"api-preco","viavarejo.com.br/team":"pricing"},"labels":{"app":"api-preco-pontofrio","app.kubernetes.io/deployed-by":"spinnaker-artifact-nexus","app.kubernetes.io/environment":"prd","app.kubernetes.io/managed-by":"spinnaker","app.kubernetes.io/name":"pricing","app.kubernetes.io/part-of":"api-preco-pontofrio","app.kubernetes.io/project-name":"api-preco-b2c","app.kubernetes.io/stage":"stable","app.kubernetes.io/version":"3.17-4"}},"spec":{"containers":[{"envFrom":[{"configMapRef":{"name":"api-preco-pontofrio"}}],"image":"harbor01.viavarejo.com.br/pricing/api-preco-b2c:3.17-4","livenessProbe":{"httpGet":{"path":"/health","port":"web"},"initialDelaySeconds":25,"periodSeconds":40,"timeoutSeconds":5},"name":"api-preco-pontofrio","ports":[{"containerPort":80,"name":"web"}],"readinessProbe":{"httpGet":{"path":"/readness","port":"web"},"initialDelaySeconds":15,"periodSeconds":40,"successThreshold":1,"timeoutSeconds":5},"resources":{"limits":{"cpu":"500m","memory":"1Gi"},"requests":{"cpu":"500m","memory":"1Gi"}}}],"dnsPolicy":"ClusterFirst","hostAliases":[{"hostnames":["catalogo.pontofrio.com.br"],"ip":"10.106.24.18"}],"nodeSelector":{"app":"preco-pf"}}}}}
+    moniker.spinnaker.io/application: pricing
+    moniker.spinnaker.io/cluster: deployment api-preco-pontofrio
+    viavarejo.com.br/app: api-preco
+    viavarejo.com.br/environment: prd
+    viavarejo.com.br/team: pricing
+  creationTimestamp: "2020-07-17T22:28:28Z"
+  generation: 1136
+  labels:
+    app: api-preco-pontofrio
+    app.kubernetes.io/deployed-by: spinnaker-artifact-nexus
+    app.kubernetes.io/environment: prd
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: pricing
+    app.kubernetes.io/part-of: api-preco-pontofrio
+    app.kubernetes.io/project-name: api-preco-b2c
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 3.17-4
+  name: api-preco-pontofrio
+  namespace: api-preco-b2c-prd
+  resourceVersion: "1414654238"
+  uid: d7a28fba-364d-4c35-afd7-b2acfb778af6
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 40
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: api-preco-pontofrio
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        artifact.spinnaker.io/location: api-preco-b2c-prd
+        artifact.spinnaker.io/name: api-preco-pontofrio
+        artifact.spinnaker.io/type: kubernetes/deployment
+        artifact.spinnaker.io/version: ""
+        automation.via/restartedAt: "2024-03-07T06:02:15.980916Z"
+        k8s.viavarejo.com.br/forced-restart: "2021-12-07T18:35:10+00:00"
+        kubectl.kubernetes.io/restartedAt: "2024-03-22T00:12:14-03:00"
+        moniker.spinnaker.io/application: pricing
+        moniker.spinnaker.io/cluster: deployment api-preco-pontofrio
+        viavarejo.com.br/app: api-preco
+        viavarejo.com.br/team: pricing
+      creationTimestamp: null
+      labels:
+        app: api-preco-pontofrio
+        app.kubernetes.io/managed-by: spinnaker
+        app.kubernetes.io/name: pricing
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: api-preco-pontofrio-v001
+        image: harbor01.viavarejo.com.br/pricing/api-preco-b2c-prd/api-preco-b2c:3.14-1
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /health
+            port: web
+            scheme: HTTP
+          initialDelaySeconds: 25
+          periodSeconds: 40
+          successThreshold: 1
+          timeoutSeconds: 5
+        name: api-preco-pontofrio
+        ports:
+        - containerPort: 80
+          name: web
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /readness
+            port: web
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 40
+          successThreshold: 1
+          timeoutSeconds: 5
+        resources:
+          limits:
+            cpu: 500m
+            memory: 1Gi
+          requests:
+            cpu: 500m
+            memory: 1Gi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      hostAliases:
+      - hostnames:
+        - catalogo.pontofrio.com.br
+        ip: 10.106.24.18
+      nodeSelector:
+        app: preco-pf
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 40
+  conditions:
+  - lastTransitionTime: "2024-03-20T17:49:34Z"
+    lastUpdateTime: "2024-03-20T17:49:34Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-09-15T06:12:54Z"
+    lastUpdateTime: "2024-03-22T03:14:20Z"
+    message: ReplicaSet "api-preco-pontofrio-6d8c88b9c4" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 1136
+  readyReplicas: 40
+  replicas: 40
+  updatedReplicas: 40

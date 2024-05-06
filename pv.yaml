@@ -3,11 +3,11 @@ kind: PersistentVolume
 metadata:
   name: sku-catalog
   labels:
-    type: local
+    type: azure-blob
 spec:
   storageClassName: blob-fuse-stgviastore
   capacity:
-    storage: 1Gi
+    storage: 10Gi
   accessModes:
   - ReadWriteMany
   hostPath:

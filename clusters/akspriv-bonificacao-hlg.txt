@@ -1,0 +1,16 @@
+__________________________________________________________________________________________
+>>> Deprecated APIs removed in 1.22 <<<
+------------------------------------------------------------------------------------------
+KIND                 NAMESPACE                NAME                                     API_VERSION                         REPLACE_WITH (SINCE)
+ClusterRole          <undefined>              nginx-ingress-clusterrole                rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+ClusterRoleBinding   <undefined>              nginx-ingress-clusterrole-nisa-binding   rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+Ingress              bonificacao-hlg          comercial-bonificacao-ngx-internal       extensions/v1beta1                  networking.k8s.io/v1 (1.19.0)
+Ingress              bonificacao-sit          comercial-bonificacao-ngx-internal       extensions/v1beta1                  networking.k8s.io/v1 (1.19.0)
+Ingress              bonificacao-stg          comercial-bonificacao-ngx-internal       extensions/v1beta1                  networking.k8s.io/v1 (1.19.0)
+PriorityClass        <undefined>              addon-priority                           scheduling.k8s.io/v1beta1           scheduling.k8s.io/v1 (1.14.0)
+PriorityClass        <undefined>              high-priority                            scheduling.k8s.io/v1beta1           scheduling.k8s.io/v1 (1.14.0)
+Role                 ingress-nginx            nginx-ingress-role                       rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+Role                 ingress-nginx-external   nginx-ingress-role                       rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+RoleBinding          ingress-nginx            nginx-ingress-role-nisa-binding          rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+RoleBinding          ingress-nginx-external   nginx-ingress-role-nisa-binding          rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+StorageClass         <undefined>              default                                  storage.k8s.io/v1beta1              storage.k8s.io/v1 (1.6.0)
