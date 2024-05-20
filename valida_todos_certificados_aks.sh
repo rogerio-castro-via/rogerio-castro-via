@@ -24,6 +24,9 @@ for NAMESPACE in $namespaces; do
         for key in $(echo $secret_data | jq -r 'keys[]'); do
             # Verifica se o valor da chave é um certificado
             if echo "$key" | grep -q ".crt"; then
+                # Obtém o nome do certificado
+                cert_name=$(echo "$key" | sed 's/\.crt//')
+
                 # Obtém o certificado e decodifica (se base64)
                 cert=$(echo "$secret_data" | jq -r ".\"$key\"" | base64 -d)
 
@@ -31,7 +34,7 @@ for NAMESPACE in $namespaces; do
                 expiration_date=$(echo "$cert" | openssl x509 -noout -enddate | cut -d= -f2)
 
                 # Escreve as informações do certificado no arquivo de saída
-                echo -e "$NAMESPACE\t$key\t$expiration_date" >> "$output_file"
+                echo -e "$NAMESPACE\t$cert_name\t$expiration_date" >> "$output_file"
             fi
         done
     done

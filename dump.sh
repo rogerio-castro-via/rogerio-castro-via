@@ -12,8 +12,8 @@ EOF
 }
 
 # Variáveis
-POD_NAME=$(kubectl get pods | grep bahia | awk '{print $1}' | head -1)  # Substitua "bahia" pelo critério de busca para encontrar o pod
-
+POD_NAME=$(kubectl get pods | grep bahia | awk '{print $1}' | tail -1)  # Substitua "bahia" pelo critério de busca para encontrar o pod
+echo "$POD_NAME"
 # Executar a função quatro vezes
 for ((i=1; i<=3; i++)); do
     echo "Executando dump número $i..."

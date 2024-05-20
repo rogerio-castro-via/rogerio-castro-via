@@ -1,0 +1,104 @@
+admin-backend-preco-frete-comercial-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+admin-backend-preco-frete-comercial-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+admin-backend-preco-frete-comercial-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+admin-backend-preco-frete-comercial-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+admin-backend-preco-frete-comercial-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+admin-backend-preco-frete-comercial-prd	NAME
+pontofrio-tls	Sep 12 23:59:59 2024 GMT
+admin-preco-b2c-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+admin-preco-b2c-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+admin-preco-b2c-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+admin-preco-b2c-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+admin-preco-b2c-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+admin-preco-b2c-prd	NAME
+pontofrio-tls	Sep 12 23:59:59 2024 GMT
+api-desconto-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+api-desconto-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+api-desconto-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+api-oferta-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+api-oferta-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+api-oferta-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+api-oferta-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+api-oferta-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+api-preco-b2c-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+api-preco-b2c-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+api-preco-b2c-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+api-preco-b2c-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+api-preco-b2c-prd	NAME
+default-token-zr8qd	Jul 16 16:37:25 2050 GMT
+api-preco-b2c-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+api-preco-b2c-prd	NAME
+pontofrio-tls	Sep 12 23:59:59 2024 GMT
+api-preco-feed-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+api-preco-feed-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+api-preco-feed-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+api-preco-feed-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+api-preco-feed-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+api-preco-feed-prd	NAME
+pontofrio-tls	Sep 12 23:59:59 2024 GMT
+api-preco-frete-comercial-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+api-preco-frete-comercial-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+api-preco-frete-comercial-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+api-preco-frete-comercial-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+api-preco-frete-comercial-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+api-preco-frete-comercial-prd	NAME
+pontofrio-tls	Sep 12 23:59:59 2024 GMT
+api-sharedservice-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+api-sharedservice-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+api-sharedservice-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+consumer-preco-frete-comercial-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+consumer-preco-frete-comercial-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+consumer-preco-frete-comercial-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+consumer-preco-frete-comercial-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+consumer-preco-frete-comercial-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+consumer-preco-frete-comercial-prd	NAME
+pontofrio-tls	Sep 12 23:59:59 2024 GMT
+default	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+front-desconto-online-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+front-desconto-online-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+front-desconto-online-prd	NAME
+pontofrio-tls	Sep 12 23:59:59 2024 GMT

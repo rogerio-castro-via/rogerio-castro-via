@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variáveis
-POD_NAME=$(kubectl get pods  | grep bahia | awk '{print $1}' | head -1)  # Substitua "nomedopod" pelo nome do seu pod
+POD_NAME=$(kubectl get pods  | grep bahia | awk '{print $1}' | tail -1)  # Substitua "nomedopod" pelo nome do seu pod
 SOURCE_PATH="/app"  # Substitua pelo caminho onde os arquivos de dump estão no pod
 DEST_PATH="/home/rogerio/k6"   # Substitua pelo caminho onde deseja salvar os arquivos localmente
 
