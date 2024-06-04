@@ -1,0 +1,40 @@
+apiVersion: v1
+data:
+  ca.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIEyTCCArGgAwIBAgIQBs/far0Zf8CZZ58hkpR1/jANBgkqhkiG9w0BAQsFADAN
+    MQswCQYDVQQDEwJjYTAgFw0yMDA3MDkxODE3MTlaGA8yMDUwMDcwOTE4MjcxOVow
+    DTELMAkGA1UEAxMCY2EwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCy
+    c8tf1DRJmQFOgSXnIeq7IszD5iY99Lzc1Kt11E1RtwPjf8HK3xhc5hDpL3tuEfdt
+    tKXD5gc5luDIdimedp/sknzCYPctpy1Qex+/Y34VtskgJqOOSstcCcw7C0Yipu9J
+    DBop0lfoal/qjB+avSyINcRly/xsuVzMrFp6h7ZN6jRJsCLRuECO+pR1CA0k4+uA
+    DRD6laHK9eDOy/8ca+XRBIh+rfb9LZ+6RgOQ3nsBri7SLOiKC4ohBiFSTyG+RMs2
+    1Bcjb1NOYwNQE8AzgB97RwqwEqihFpO2jstfjk97vYT+dHssPbqPdk0VfweUtosO
+    uNFqQvQjAbgAN8MJ3U1qxJ9vClOYAiPow5pUeekX3VFJI+1KhJpsdbC4EGq9dMIr
+    ViiNa/7FHiN72MW6f7RKgCwHUda+UDMDU8deiIjkUMaHgd0jpXDC8EKbEpKnuxbw
+    4990AuYlsX6Ehbog+nopOkkhFVG1TMv+cax1rJrNJ42ZKvWIQG5NAgRzMODbNMVG
+    72pRcxGnhUCv6bIw5JXx4OaOo+PTeWZ0s+WQZ61UZWM6HvhuVLqVm4ZlGe/+cF0c
+    HaFLrsuJHlyPl0IbSdNXiFfnoKI3SQQditxjLZISEOo1v5PtjRn+graj2oPJkF6h
+    D5i0Z4hpHk9aqDdB6eCgxKa6GKiQVAKUq9Q8qpItfQIDAQABoyMwITAOBgNVHQ8B
+    Af8EBAMCAqQwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAgEAfEFx
+    FT6ljvg+3kmkT5jRHwwkvcjc14RDwzGReutFW34j4cMGy+S6RF5Ep6azgtlmvY8K
+    T3DiDZ+Td/kzuVt4zCmp09dJdIzMJz25SPTPp++QY7Qyvhrxt0ZA73wUrsx0yLdq
+    Zhw4qsuAYjCNPBxxrWaKDW6MGQDEL1ySEbcZpgUd6yKyyeoKTLEaADMZEgH2R8Kh
+    TysL50nm2B+CAf9lVqo7GPSc6xpcJuXEw5uDG61WQDkt7M+okeCOtnnnDfvV0mrY
+    iwMMdqgOYQz3mjts0SQW2QknF0EsU9AeS1AeANjQ2YNg18FWbSyuRWziFJW9l0SQ
+    ZsAedc5e5VJZVAwSmXftUqBJlKSykLewLUaBXFwgK3n/ED0tW6c+KEbCog1wgcqD
+    B5e3Rpb4fOgsMZczRF23DXV7SwYyX1SKcyrfbi+/G4LZcsYQzcSyBJ0l+T5YQuPT
+    Rqi2+K5d1fhKFA+5RMB/S1nRZZQs/tpd4tCl7VVrvTw+tHokcggcanBwazfexW4M
+    quH0H5WhF8uqTGUw/NK+ZVxqkBXtT42GpJkTkKsl0vvueEv4qVlQW0Lm1U1TtixU
+    Se7DGU0vcOkuFijknqV9L07QZ9EzyDerhOIFozLcla7Nj/r/YXoW49XESddql4ye
+    LAp/Of3AsiYLHi3mzoxx2EdBp+gykSTSIfl5uG8=
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  annotations:
+    kubernetes.io/description: Contains a CA bundle that can be used to verify the
+      kube-apiserver when using internal endpoints such as the internal service IP
+      or kubernetes.default.svc. No other usage is guaranteed across distributions
+      of Kubernetes clusters.
+  name: kube-root-ca.crt
+  namespace: api-preco-b2c-hlg

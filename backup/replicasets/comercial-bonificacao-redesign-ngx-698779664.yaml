@@ -1,0 +1,91 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: bonificacao-prd
+    artifact.spinnaker.io/name: comercial-bonificacao-redesign-ngx
+    artifact.spinnaker.io/type: kubernetes/deployment
+    artifact.spinnaker.io/version: ""
+    deployment.kubernetes.io/desired-replicas: "2"
+    deployment.kubernetes.io/max-replicas: "3"
+    deployment.kubernetes.io/revision: "68"
+    moniker.spinnaker.io/application: bonificacao
+    moniker.spinnaker.io/cluster: deployment comercial-bonificacao-redesign-ngx
+  labels:
+    app: comercial-bonificacao-redesign-ngx
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: bonificacao
+    deploymentconfig: comercial-bonificacao-redesign-ngx
+    pod-template-hash: "698779664"
+  name: comercial-bonificacao-redesign-ngx-698779664
+  namespace: bonificacao-prd
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: comercial-bonificacao-redesign-ngx
+      pod-template-hash: "698779664"
+  template:
+    metadata:
+      annotations:
+        artifact.spinnaker.io/location: bonificacao-prd
+        artifact.spinnaker.io/name: comercial-bonificacao-redesign-ngx
+        artifact.spinnaker.io/type: kubernetes/deployment
+        artifact.spinnaker.io/version: ""
+        automation.via/restartedAt: "2023-11-03T06:00:11.682843Z"
+        kubectl.kubernetes.io/restartedAt: "2023-10-20T00:14:12-03:00"
+        moniker.spinnaker.io/application: bonificacao
+        moniker.spinnaker.io/cluster: deployment comercial-bonificacao-redesign-ngx
+      creationTimestamp: null
+      labels:
+        app: comercial-bonificacao-redesign-ngx
+        app.kubernetes.io/managed-by: spinnaker
+        app.kubernetes.io/name: bonificacao
+        deploymentconfig: comercial-bonificacao-redesign-ngx
+        pod-template-hash: "698779664"
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: comercial-bonificacao-redesign-ngx-gc7d47fhht-v000
+        image: harbor01.viavarejo.com.br/bonificacao/bonificacao-prd/comercial-bonificacao-redesign-ngx:2.5.0-29
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 180
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 2
+        name: comercial-bonificacao-redesign-ngx
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+        resources:
+          limits:
+            cpu: 100m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        agentpool: boniapp
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30

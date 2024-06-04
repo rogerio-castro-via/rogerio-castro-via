@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "9"
+  labels:
+    app: comercial-bonificacao-pgbouncer
+    pod-template-hash: 6fb884894d
+  name: comercial-bonificacao-pgbouncer-6fb884894d
+  namespace: bonificacao-prd
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: comercial-bonificacao-pgbouncer
+      pod-template-hash: 6fb884894d
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/restartedAt: "2021-02-23T12:31:00-03:00"
+      creationTimestamp: null
+      labels:
+        app: comercial-bonificacao-pgbouncer
+        pod-template-hash: 6fb884894d
+    spec:
+      containers:
+      - image: harbor01.viavarejo.com.br/bonificacao/bonificacao-prd/comercial-bonificacao-pgbouncer:1.0.0-3
+        imagePullPolicy: IfNotPresent
+        lifecycle:
+          preStop:
+            exec:
+              command:
+              - /bin/sh
+              - -c
+              - killall -INT pgbouncer && sleep 120
+        livenessProbe:
+          failureThreshold: 3
+          initialDelaySeconds: 180
+          periodSeconds: 50
+          successThreshold: 1
+          tcpSocket:
+            port: 5432
+          timeoutSeconds: 2
+        name: comercial-bonificacao-pgbouncer
+        ports:
+        - containerPort: 5432
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          periodSeconds: 10
+          successThreshold: 1
+          tcpSocket:
+            port: 5432
+          timeoutSeconds: 2
+        resources:
+          limits:
+            cpu: 200m
+            memory: 256Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /etc/pgbouncer
+          name: configfiles
+          readOnly: true
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        app: bonoapp
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: configfiles
+        secret:
+          defaultMode: 420
+          secretName: comercial-bonificacao-pgbouncer

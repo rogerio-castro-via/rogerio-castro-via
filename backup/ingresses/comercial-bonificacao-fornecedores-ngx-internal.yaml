@@ -1,0 +1,61 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    app.via.com.br/branch: release/2.0.0
+    app.via.com.br/flag: via
+    app.via.com.br/nexus-url: https://nexus.viavarejo.com.br/repository/charts/comercial-bonificacao-fornecedores-ngx/2.0.0-7/deploy-via-prd.yaml
+    app.via.com.br/project-name: comercial-bonificacao-fornecedores-ngx
+    app.via.com.br/repository: comercial-bonificacao-fornecedores-ngx
+    app.via.com.br/servicenow-task-number: CHG0282032
+    app.via.com.br/spinnaker: "true"
+    app.via.com.br/squad: Bonificação
+    app.via.com.br/tribe: Inteligência Comercial
+    app.via.com.br/version: 2.0.0-7
+    app.via.com.br/xl-release-start-date: Fri Sep 22 16:50:22 BRT 2023
+    app.via.com.br/xl-release-title: '[Bonificacao] comercial-bonificacao-fornecedores-ngx
+      - 2.0.0-7'
+    artifact.spinnaker.io/location: bonificacao-prd
+    artifact.spinnaker.io/name: comercial-bonificacao-fornecedores-ngx-internal
+    artifact.spinnaker.io/type: kubernetes/ingress
+    artifact.spinnaker.io/version: ""
+    moniker.spinnaker.io/application: bonificacao
+    moniker.spinnaker.io/cluster: ingress comercial-bonificacao-fornecedores-ngx-internal
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    strategy.spinnaker.io/versioned: "false"
+  labels:
+    app: comercial-bonificacao-fornecedores-ngx
+    app.kubernetes.io/deployed-by: spinnaker-artifact-nexus
+    app.kubernetes.io/environment: prd
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: bonificacao
+    app.kubernetes.io/part-of: comercial-bonificacao-fornecedores-ngx-internal
+    app.kubernetes.io/project-name: comercial-bonificacao-fornecedores-ngx
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 2.0.0-7
+  name: comercial-bonificacao-fornecedores-ngx-internal
+  namespace: bonificacao-prd
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: parceiros.viavarejo.com.br
+    http:
+      paths:
+      - backend:
+          service:
+            name: comercial-bonificacao-fornecedores-ngx
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+      - backend:
+          service:
+            name: comercial-bonificacao-fornecedores-ngx
+            port:
+              number: 443
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - parceiros.viavarejo.com.br
+    secretName: viavarejo-tls

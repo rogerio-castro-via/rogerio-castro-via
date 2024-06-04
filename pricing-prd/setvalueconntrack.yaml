@@ -1,0 +1,103 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  annotations:
+    deprecated.daemonset.template.generation: "14"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"DaemonSet","metadata":{"annotations":{"deprecated.daemonset.template.generation":"2"},"name":"setvalueconntrack","namespace":"kube-system"},"spec":{"revisionHistoryLimit":10,"selector":{"matchLabels":{"name":"setvalueconntrack"}},"template":{"metadata":{"creationTimestamp":null,"labels":{"name":"setvalueconntrack"}},"spec":{"affinity":{"nodeAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"setconntracknew","operator":"NotIn","values":["update"]}]}]}}},"containers":[{"command":["nsenter","--target","1","--mount","--uts","--ipc","--net","--pid","--","bash","-exc","file=/valuescoontrack.log\nif [[ ! -f $file ]]; then\n  conntrackvalue=$(sysctl net.netfilter | grep conntrack_max)\n  echo $conntrackvalue \u003e $file\n  value=$(sysctl net.netfilter | grep conntrack_max | awk '{print $3}')\n  newv=$(($value*2))\n  sysctl -w net.netfilter.nf_conntrack_max=$newv\n  echo \"net.netfilter.nf_conntrack_max = $newv\" \u003e\u003e /etc/sysctl.d/999-sysctl-aks.conf\n  sleep 60\n  kubectl --kubeconfig=/var/lib/kubelet/kubeconfig label node ${HOSTNAME,,} setconntracknew=update\nfi\nexit 0\n"],"image":"mcr.microsoft.com/cbl-mariner/base/core:1.0","imagePullPolicy":"IfNotPresent","name":"setvalueconntrack","resources":{"limits":{"memory":"200Mi"},"requests":{"cpu":"100m","memory":"16Mi"}},"securityContext":{"privileged":true},"terminationMessagePath":"/dev/termination-log","terminationMessagePolicy":"File"}],"dnsPolicy":"ClusterFirst","hostIPC":true,"hostNetwork":true,"hostPID":true,"restartPolicy":"Always","schedulerName":"default-scheduler","terminationGracePeriodSeconds":0,"tolerations":[{"effect":"NoSchedule","operator":"Exists"}]}},"updateStrategy":{"rollingUpdate":{"maxSurge":0,"maxUnavailable":1},"type":"RollingUpdate"}}}
+  creationTimestamp: "2024-01-10T13:11:48Z"
+  generation: 13
+  labels:
+    k8slens-edit-resource-version: v1
+  name: setvalueconntrack
+  namespace: kube-system
+  resourceVersion: "349382514"
+  uid: 8c3c13ba-cbc4-4da5-91f3-dd5cc9760cd9
+spec:
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      name: setvalueconntrack
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/restartedAt: "2024-05-21T20:04:14Z"
+      creationTimestamp: null
+      labels:
+        name: setvalueconntrack
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: setconntracknew
+                operator: NotIn
+                values:
+                - update
+      containers:
+      - command:
+        - nsenter
+        - --target
+        - "1"
+        - --mount
+        - --uts
+        - --ipc
+        - --net
+        - --pid
+        - --
+        - bash
+        - -exc
+        - |
+          file=/valuescoontrack.log
+          rm /valuescoontrack.log
+          if [[ ! -f $file ]]; then
+            conntrackvalue=$(sysctl net.netfilter | grep conntrack_max)
+            echo "valor base: $conntrackvalue"
+            echo $conntrackvalue > $file
+            value=$(sysctl net.netfilter | grep conntrack_max | awk '{print $3}')
+            newv=$(($value*2))
+            echo "valor novo: $newv"
+            sysctl -w net.netfilter.nf_conntrack_max=$newv
+            echo "net.netfilter.nf_conntrack_max = $newv" >> /etc/sysctl.d/999-sysctl-aks.conf
+            sleep 50
+            kubectl --kubeconfig=/var/lib/kubelet/kubeconfig label node ${HOSTNAME,,} setconntracknew=update
+          fi
+          exit 0
+        image: mcr.microsoft.com/cbl-mariner/base/core:1.0
+        imagePullPolicy: IfNotPresent
+        name: setvalueconntrack
+        resources:
+          limits:
+            memory: 200Mi
+          requests:
+            cpu: 100m
+            memory: 16Mi
+        securityContext:
+          privileged: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      hostIPC: true
+      hostNetwork: true
+      hostPID: true
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 0
+      tolerations:
+      - effect: NoSchedule
+        operator: Exists
+  updateStrategy:
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
+    type: RollingUpdate
+status:
+  currentNumberScheduled: 5
+  desiredNumberScheduled: 5
+  numberMisscheduled: 0
+  numberReady: 0
+  numberUnavailable: 5
+  observedGeneration: 13
+  updatedNumberScheduled: 5

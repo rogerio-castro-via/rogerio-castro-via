@@ -1,0 +1,30 @@
+apiVersion: v1
+data:
+  COMERCIAL_BONIFICACAO_API_LOGGER_REST_ENABLED: "false"
+  JVM_OPTS: -Xmx1536m -Xms512m
+  KAFKA_BOOTSTRAP_SERVERS: hnodeiidrvp001.prd.bigdata.dc.nova:6667,hnodeiidrvp002.prd.bigdata.dc.nova:6667,hnodeiidrvp003.prd.bigdata.dc.nova:6667,hnodeiidrvp004.prd.bigdata.dc.nova:6667,hnodeiidrvp005.prd.bigdata.dc.nova:6667,hnodeiidrvp006.prd.bigdata.dc.nova:6667,hnodeiidrvp007.prd.bigdata.dc.nova:6667,hnodeiidrvp008.prd.bigdata.dc.nova:6667
+  KAFKA_CONSUMER_TOPICS_AGP_FNE: KFK068.j2.prdbat.agp_fne
+  KAFKA_CONSUMER_TOPICS_FNE: KFK011.j2.prdbat.fne
+  KAFKA_CONSUMER_TOPICS_SET_MCR: KFK017.s1.prdbat.set_mcr
+  LOGGING_LEVEL_SPRING_SECURITY: ERROR
+  LOGGING_LEVEL_SPRING_WEB: ERROR
+  LOGGING_LEVEL_SPRING_WEB_FILTER: ERROR
+  LOGGING_LEVEL_VV: ERROR
+  VM_ARGS: -Dfile.encoding=UTF-8 -Duser.timezone=America/Buenos_Aires -Dspring.profiles.active=docker
+kind: ConfigMap
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: bonificacao-prd
+    artifact.spinnaker.io/name: comercial-bonificacao-kafka-consumer-6g8gm5mkg5
+    artifact.spinnaker.io/type: kubernetes/configMap
+    artifact.spinnaker.io/version: v000
+    moniker.spinnaker.io/application: bonificacao
+    moniker.spinnaker.io/cluster: configMap comercial-bonificacao-kafka-consumer-6g8gm5mkg5
+    moniker.spinnaker.io/sequence: "0"
+  labels:
+    app: comercial-bonificacao-kafka-consumer
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: bonificacao
+    moniker.spinnaker.io/sequence: "0"
+  name: comercial-bonificacao-kafka-consumer-6g8gm5mkg5-v000
+  namespace: bonificacao-prd

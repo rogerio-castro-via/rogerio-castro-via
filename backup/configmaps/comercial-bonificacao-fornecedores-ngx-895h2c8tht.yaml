@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  COMERCIAL_BONIFICACAO_FORNECEDORES_API_URL: https://comercial-bonificacao-prd.viavarejo.com.br/vv-comercial
+  COMERCIAL_BONIFICACAO_FORNECEDORES_CLIENT_APP: comercialapp:V3rb@s-@pP-$3cRe7
+  COMERCIAL_BONIFICACAO_FORNECEDORES_NGX_URL: https://parceiros.viavarejo.com.br/
+  TZ: America/Sao_Paulo
+kind: ConfigMap
+metadata:
+  labels:
+    app: comercial-bonificacao-fornecedores-ngx
+  name: comercial-bonificacao-fornecedores-ngx-895h2c8tht
+  namespace: bonificacao-prd

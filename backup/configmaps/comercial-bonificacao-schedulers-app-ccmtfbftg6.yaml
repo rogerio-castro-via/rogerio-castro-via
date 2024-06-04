@@ -1,0 +1,46 @@
+apiVersion: v1
+data:
+  COMERCIAL_BONIFICACAO_API_LOGGER_REST_ENABLED: "false"
+  ENVIRONMENT_TAG: prd
+  JVM_OPTS: -Xmx2G -Xms1536m
+  LOGGING_LEVEL_SPRING_SECURITY: TRACE
+  LOGGING_LEVEL_SPRING_WEB: TRACE
+  LOGGING_LEVEL_SPRING_WEB_FILTER: TRACE
+  LOGGING_LEVEL_VV: TRACE
+  SFTP_VV_REMOTE_DIRECTORY: /share3/Gestao\ de\ Verbas/SIT
+  VM_ARGS: -Dfile.encoding=UTF-8 -Duser.timezone=America/Buenos_Aires -Dspring.profiles.active=docker,scheduler
+kind: ConfigMap
+metadata:
+  annotations:
+    app.via.com.br/branch: release/1.0.0
+    app.via.com.br/flag: via
+    app.via.com.br/nexus-url: https://nexus.viavarejo.com.br/repository/charts/comercial-bonificacao-schedulers-app/1.0.0-33/deploy-via-prd.yaml
+    app.via.com.br/project-name: comercial-bonificacao-schedulers-app
+    app.via.com.br/repository: comercial-bonificacao-schedulers-app
+    app.via.com.br/servicenow-task-number: CHG0307657
+    app.via.com.br/spinnaker: "true"
+    app.via.com.br/squad: Bonificação
+    app.via.com.br/tribe: Inteligência Comercial
+    app.via.com.br/version: 1.0.0-33
+    app.via.com.br/xl-release-start-date: Tue Mar 05 19:16:56 BRT 2024
+    app.via.com.br/xl-release-title: '[Bonificação] comercial-bonificacao-schedulers-app
+      - 1.0.0-33'
+    artifact.spinnaker.io/location: bonificacao-prd
+    artifact.spinnaker.io/name: comercial-bonificacao-schedulers-app-ccmtfbftg6
+    artifact.spinnaker.io/type: kubernetes/configMap
+    artifact.spinnaker.io/version: ""
+    moniker.spinnaker.io/application: bonificacao
+    moniker.spinnaker.io/cluster: configMap comercial-bonificacao-schedulers-app-ccmtfbftg6
+    strategy.spinnaker.io/versioned: "false"
+  labels:
+    app: comercial-bonificacao-schedulers-app
+    app.kubernetes.io/deployed-by: spinnaker-artifact-nexus
+    app.kubernetes.io/environment: prd
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: bonificacao
+    app.kubernetes.io/part-of: comercial-bonificacao-schedulers-app-ccmtfbftg6
+    app.kubernetes.io/project-name: comercial-bonificacao-schedulers-app
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 1.0.0-33
+  name: comercial-bonificacao-schedulers-app-ccmtfbftg6
+  namespace: bonificacao-prd

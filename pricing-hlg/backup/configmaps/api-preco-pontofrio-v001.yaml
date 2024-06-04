@@ -1,0 +1,24 @@
+apiVersion: v1
+data:
+  ASPNETCORE_ENVIRONMENT: PF_Homolog
+  DescontoOnlineConfiguration__BaseAddressDescontoOnline: http://api-desconto-pontofrio.api-desconto-hlg.svc.cluster.local
+  DescontoOnlineConfiguration__TextoDescontoMarketplace: no PIX
+kind: ConfigMap
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: api-preco-b2c-hlg
+    artifact.spinnaker.io/name: api-preco-pontofrio
+    artifact.spinnaker.io/type: kubernetes/configMap
+    artifact.spinnaker.io/version: v001
+    moniker.spinnaker.io/application: pricing
+    moniker.spinnaker.io/cluster: configMap api-preco-pontofrio
+    moniker.spinnaker.io/sequence: "1"
+    viavarejo.com.br/app: api-preco
+    viavarejo.com.br/team: pricing
+  labels:
+    app: api-preco-pontofrio
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: pricing
+    moniker.spinnaker.io/sequence: "1"
+  name: api-preco-pontofrio-v001
+  namespace: api-preco-b2c-hlg

@@ -1,0 +1,16 @@
+apiVersion: v1
+data:
+  COMERCIAL_BONIFICACAO_API_LOGGER_REST_ENABLED: "false"
+  COMPRECONFIE_FILTER_ID_SELLER: "1115670"
+  JVM_OPTS: -Xmx256m -Xms128m
+  LOGGING_LEVEL_SPRING_SECURITY: TRACE
+  LOGGING_LEVEL_SPRING_WEB: TRACE
+  LOGGING_LEVEL_SPRING_WEB_FILTER: TRACE
+  LOGGING_LEVEL_VV: TRACE
+  VM_ARGS: -Dfile.encoding=UTF-8 -Duser.timezone=America/Buenos_Aires -Dspring.profiles.active=docker,compreconfie
+kind: ConfigMap
+metadata:
+  labels:
+    app: comercial-bonificacao-api
+  name: comercial-bonificacao-scheduler-cb-25kdg9hm7g
+  namespace: bonificacao-prd

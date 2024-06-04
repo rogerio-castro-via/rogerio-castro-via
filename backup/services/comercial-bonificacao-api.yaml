@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    app.via.com.br/branch: release/6.7.0
+    app.via.com.br/flag: via
+    app.via.com.br/nexus-url: https://nexus.viavarejo.com.br/repository/charts/comercial-bonificacao-api/6.7.0-28/deploy-via-prd.yaml
+    app.via.com.br/project-name: comercial-bonificacao-api
+    app.via.com.br/repository: comercial-bonificacao-api
+    app.via.com.br/servicenow-task-number: CHG0307654
+    app.via.com.br/spinnaker: "true"
+    app.via.com.br/squad: Bonificação
+    app.via.com.br/tribe: Inteligência Comercial
+    app.via.com.br/version: 6.7.0-28
+    app.via.com.br/xl-release-start-date: Tue Mar 05 18:39:35 BRT 2024
+    app.via.com.br/xl-release-title: '[Bonificacao] comercial-bonificacao-api - 6.7.0-28'
+    artifact.spinnaker.io/location: bonificacao-prd
+    artifact.spinnaker.io/name: comercial-bonificacao-api
+    artifact.spinnaker.io/type: kubernetes/service
+    artifact.spinnaker.io/version: ""
+    moniker.spinnaker.io/application: bonificacao
+    moniker.spinnaker.io/cluster: service comercial-bonificacao-api
+    prometheus.io/path: /actuator/prometheus
+    prometheus.io/port: "8080"
+    prometheus.io/scrape: "true"
+    strategy.spinnaker.io/versioned: "false"
+  labels:
+    app: comercial-bonificacao-api
+    app.kubernetes.io/deployed-by: spinnaker-artifact-nexus
+    app.kubernetes.io/environment: prd
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: bonificacao
+    app.kubernetes.io/part-of: comercial-bonificacao-api
+    app.kubernetes.io/project-name: comercial-bonificacao-api
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 6.7.0-28
+  name: comercial-bonificacao-api
+  namespace: bonificacao-prd
+spec:
+  clusterIP: 10.2.0.169
+  clusterIPs:
+  - 10.2.0.169
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: 80-tcp
+    port: 80
+    targetPort: 8080
+  - name: 8090-tcp
+    port: 8090
+  selector:
+    app: comercial-bonificacao-api
+    deploymentconfig: comercial-bonificacao-api

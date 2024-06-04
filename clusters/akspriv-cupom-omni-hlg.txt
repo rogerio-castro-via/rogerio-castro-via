@@ -1,0 +1,24 @@
+__________________________________________________________________________________________
+>>> Deprecated APIs removed in 1.22 <<<
+------------------------------------------------------------------------------------------
+KIND                 NAMESPACE                NAME                                     API_VERSION                         REPLACE_WITH (SINCE)
+Role                 ingress-nginx-external   nginx-ingress-role                       rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+Ingress              cupom-omni-sandbox       api-cupom-omni                           extensions/v1beta1                  networking.k8s.io/v1 (1.19.0)
+StorageClass         <undefined>              default                                  storage.k8s.io/v1beta1              storage.k8s.io/v1 (1.6.0)
+RoleBinding          ingress-nginx-external   nginx-ingress-role-nisa-binding          rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+Ingress              api-hub-cupom-omni-stg   api-hub-cupom-omnichannel                extensions/v1beta1                  networking.k8s.io/v1 (1.19.0)
+RoleBinding          ingress-nginx            nginx-ingress-role-nisa-binding          rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+ClusterRoleBinding   <undefined>              nginx-ingress-clusterrole-nisa-binding   rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+Ingress              cupom-omni-hlg           api-hub-cupom-omnichannel                extensions/v1beta1                  networking.k8s.io/v1 (1.19.0)
+ClusterRole          <undefined>              nginx-ingress-clusterrole                rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+PriorityClass        <undefined>              addon-priority                           scheduling.k8s.io/v1beta1           scheduling.k8s.io/v1 (1.14.0)
+PriorityClass        <undefined>              high-priority                            scheduling.k8s.io/v1beta1           scheduling.k8s.io/v1 (1.14.0)
+Role                 ingress-nginx            nginx-ingress-role                       rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+__________________________________________________________________________________________
+>>> Deprecated APIs removed in 1.25 <<<
+------------------------------------------------------------------------------------------
+KIND                      NAMESPACE                NAME                        API_VERSION           REPLACE_WITH (SINCE)
+HorizontalPodAutoscaler   ingress-nginx-external   nginx-external-hpa          autoscaling/v2beta1   autoscaling/v2 (1.23.0)
+HorizontalPodAutoscaler   ingress-nginx            nginx-external-hpa          autoscaling/v2beta1   autoscaling/v2 (1.23.0)
+HorizontalPodAutoscaler   ingress-nginx-kafka      nginx-ingress-controller    autoscaling/v2beta1   autoscaling/v2 (1.23.0)
+HorizontalPodAutoscaler   api-hub-cupom-omni-stg   api-hub-cupom-omnichannel   autoscaling/v2beta1   autoscaling/v2 (1.23.0)

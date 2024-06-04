@@ -1,0 +1,655 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: api-preco-b2c-sit
+    artifact.spinnaker.io/name: api-preco-extra
+    artifact.spinnaker.io/type: kubernetes/deployment
+    artifact.spinnaker.io/version: ""
+    deployment.kubernetes.io/revision: "631"
+    devops.k8s.io/branch: release/3.22
+    devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+    devops.k8s.io/component-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-name: cnova-preco
+    devops.k8s.io/component-plataform: 'Baixa '
+    devops.k8s.io/component-repository-url: https://github.com/viavarejo-internal/cnova-preco
+    devops.k8s.io/component-squad: SQ PREÇO
+    devops.k8s.io/component-system0-description: ""
+    devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+    devops.k8s.io/component-system0-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-system0-name: '[Serviço de Preço]'
+    devops.k8s.io/component-system0-product0-description: Ser uma plataforma que centralize
+      todas as precificações 1P, em todos os canais da companhia, bem como gerenciar
+      possíveis divergências de Preços para que o Comercial e Pricing tenham visão
+      completa para tomada de decisão.
+    devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+    devops.k8s.io/component-system0-product0-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-system0-product0-name: Precificação de Produto
+    devops.k8s.io/component-tribe: TB PREÇO
+    devops.k8s.io/flag: ex
+    devops.k8s.io/nexus-url: https://nexus.viavarejo.com.br/repository/charts/api-preco-b2c/3.21-1/deploy-via-sit.yaml
+    devops.k8s.io/project-name: api-preco-extra
+    devops.k8s.io/repository: cnova-preco
+    devops.k8s.io/servicenow-task-number: ""
+    devops.k8s.io/spinnaker: "true"
+    devops.k8s.io/squad: Preço
+    devops.k8s.io/tribe: Inteligência Comercial
+    devops.k8s.io/version: 3.22-8
+    devops.k8s.io/xl-release-start-date: Mon May 20 12:52:30 BRT 2024
+    devops.k8s.io/xl-release-title: '[Preço] api-preco-extra (ex) - 3.22-8'
+    meta.helm.sh/release-name: api-preco-extra
+    meta.helm.sh/release-namespace: api-preco-b2c-sit
+    moniker.spinnaker.io/application: pricing
+    moniker.spinnaker.io/cluster: deployment api-preco-extra
+    strategy.spinnaker.io/versioned: "false"
+    viavarejo.com.br/app: api-preco
+    viavarejo.com.br/team: pricing
+  labels:
+    app: api-preco-extra
+    app.kubernetes.io/deployed-by: spinnaker-helm
+    app.kubernetes.io/environment: sit
+    app.kubernetes.io/instance: api-preco-extra
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: convair-helm
+    app.kubernetes.io/part-of: api-preco-extra
+    app.kubernetes.io/project-name: api-preco-extra
+    app.kubernetes.io/release-name: api-preco-extra
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 3-22-8
+    devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+    devops.k8s.io/component-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-name: cnova-preco
+    devops.k8s.io/component-plataform: baixa
+    devops.k8s.io/component-squad: sq-preco
+    devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+    devops.k8s.io/component-system0-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-system0-name: servico-de-preco
+    devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+    devops.k8s.io/component-system0-product0-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-system0-product0-name: precificacao-de-produto
+    devops.k8s.io/component-tribe: tb-preco
+    helm.sh/chart: convair-helm-v0.5.0
+    k8slens-edit-resource-version: v1
+  name: api-preco-extra
+  namespace: api-preco-b2c-sit
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: api-preco-extra
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        artifact.spinnaker.io/location: api-preco-b2c-sit
+        artifact.spinnaker.io/name: api-preco-extra
+        artifact.spinnaker.io/type: kubernetes/deployment
+        artifact.spinnaker.io/version: ""
+        devops.k8s.io/branch: release/3.22
+        devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+        devops.k8s.io/component-journey: JN INTELIGÊNCIA COMERCIAL
+        devops.k8s.io/component-name: cnova-preco
+        devops.k8s.io/component-plataform: 'Baixa '
+        devops.k8s.io/component-repository-url: https://github.com/viavarejo-internal/cnova-preco
+        devops.k8s.io/component-squad: SQ PREÇO
+        devops.k8s.io/component-system0-description: ""
+        devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+        devops.k8s.io/component-system0-journey: JN INTELIGÊNCIA COMERCIAL
+        devops.k8s.io/component-system0-name: '[Serviço de Preço]'
+        devops.k8s.io/component-system0-product0-description: Ser uma plataforma que
+          centralize todas as precificações 1P, em todos os canais da companhia, bem
+          como gerenciar possíveis divergências de Preços para que o Comercial e Pricing
+          tenham visão completa para tomada de decisão.
+        devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+        devops.k8s.io/component-system0-product0-journey: JN INTELIGÊNCIA COMERCIAL
+        devops.k8s.io/component-system0-product0-name: Precificação de Produto
+        devops.k8s.io/component-tribe: TB PREÇO
+        devops.k8s.io/flag: ex
+        devops.k8s.io/nexus-url: https://nexus.viavarejo.com.br/repository/charts/api-preco-b2c/3.21-1/deploy-via-sit.yaml
+        devops.k8s.io/project-name: api-preco-extra
+        devops.k8s.io/repository: cnova-preco
+        devops.k8s.io/servicenow-task-number: ""
+        devops.k8s.io/spinnaker: "true"
+        devops.k8s.io/squad: Preço
+        devops.k8s.io/tribe: Inteligência Comercial
+        devops.k8s.io/version: 3.22-8
+        devops.k8s.io/xl-release-start-date: Mon May 20 12:52:30 BRT 2024
+        devops.k8s.io/xl-release-title: '[Preço] api-preco-extra (ex) - 3.22-8'
+        kubectl.kubernetes.io/restartedAt: "2024-05-20T16:12:58Z"
+        moniker.spinnaker.io/application: pricing
+        moniker.spinnaker.io/cluster: deployment api-preco-extra
+        strategy.spinnaker.io/versioned: "false"
+        viavarejo.com.br/app: api-preco
+        viavarejo.com.br/team: pricing
+      creationTimestamp: null
+      labels:
+        app: api-preco-extra
+        app.kubernetes.io/deployed-by: spinnaker-helm
+        app.kubernetes.io/environment: sit
+        app.kubernetes.io/instance: api-preco-extra
+        app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/name: convair-helm
+        app.kubernetes.io/part-of: api-preco-extra
+        app.kubernetes.io/project-name: api-preco-extra
+        app.kubernetes.io/release-name: api-preco-extra
+        app.kubernetes.io/stage: stable
+        app.kubernetes.io/version: 3-22-8
+        devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+        devops.k8s.io/component-journey: jn-inteligencia-comercial
+        devops.k8s.io/component-name: cnova-preco
+        devops.k8s.io/component-plataform: baixa
+        devops.k8s.io/component-squad: sq-preco
+        devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+        devops.k8s.io/component-system0-journey: jn-inteligencia-comercial
+        devops.k8s.io/component-system0-name: servico-de-preco
+        devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+        devops.k8s.io/component-system0-product0-journey: jn-inteligencia-comercial
+        devops.k8s.io/component-system0-product0-name: precificacao-de-produto
+        devops.k8s.io/component-tribe: tb-preco
+        helm.sh/chart: convair-helm-v0.5.0
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: api-preco-extra
+        image: harbor.viavarejo.com.br/pricing/api-preco-b2c:3.22-8
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /health
+            port: web
+            scheme: HTTP
+          initialDelaySeconds: 25
+          periodSeconds: 40
+          successThreshold: 1
+          timeoutSeconds: 5
+        name: api-preco-extra
+        ports:
+        - containerPort: 8080
+          name: web
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /readness
+            port: web
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 40
+          successThreshold: 1
+          timeoutSeconds: 5
+        resources:
+          limits:
+            cpu: 100m
+            memory: 200Mi
+          requests:
+            cpu: 50m
+            memory: 100Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      hostAliases:
+      - hostnames:
+        - catalogo.extra.com.br
+        ip: 10.106.24.17
+      nodeSelector:
+        app: pricing
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: api-preco-b2c-sit
+    artifact.spinnaker.io/name: api-preco-extra
+    artifact.spinnaker.io/type: kubernetes/service
+    artifact.spinnaker.io/version: ""
+    devops.k8s.io/branch: release/3.22
+    devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+    devops.k8s.io/component-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-name: cnova-preco
+    devops.k8s.io/component-plataform: 'Baixa '
+    devops.k8s.io/component-repository-url: https://github.com/viavarejo-internal/cnova-preco
+    devops.k8s.io/component-squad: SQ PREÇO
+    devops.k8s.io/component-system0-description: ""
+    devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+    devops.k8s.io/component-system0-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-system0-name: '[Serviço de Preço]'
+    devops.k8s.io/component-system0-product0-description: Ser uma plataforma que centralize
+      todas as precificações 1P, em todos os canais da companhia, bem como gerenciar
+      possíveis divergências de Preços para que o Comercial e Pricing tenham visão
+      completa para tomada de decisão.
+    devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+    devops.k8s.io/component-system0-product0-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-system0-product0-name: Precificação de Produto
+    devops.k8s.io/component-tribe: TB PREÇO
+    devops.k8s.io/flag: ex
+    devops.k8s.io/nexus-url: https://nexus.viavarejo.com.br/repository/charts/api-preco-b2c/3.22-2/deploy-via-sit.yaml
+    devops.k8s.io/project-name: api-preco-extra
+    devops.k8s.io/repository: cnova-preco
+    devops.k8s.io/servicenow-task-number: ""
+    devops.k8s.io/spinnaker: "true"
+    devops.k8s.io/squad: Preço
+    devops.k8s.io/tribe: Inteligência Comercial
+    devops.k8s.io/version: 3.22-8
+    devops.k8s.io/xl-release-start-date: Mon May 20 12:52:30 BRT 2024
+    devops.k8s.io/xl-release-title: '[Preço] api-preco-extra (ex) - 3.22-8'
+    meta.helm.sh/release-name: api-preco-extra
+    meta.helm.sh/release-namespace: api-preco-b2c-sit
+    moniker.spinnaker.io/application: pricing
+    moniker.spinnaker.io/cluster: service api-preco-extra
+    strategy.spinnaker.io/versioned: "false"
+    viavarejo.com.br/app: api-preco
+    viavarejo.com.br/team: pricing
+  labels:
+    app: api-preco-extra
+    app.kubernetes.io/deployed-by: spinnaker-helm
+    app.kubernetes.io/environment: sit
+    app.kubernetes.io/instance: api-preco-extra
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: convair-helm
+    app.kubernetes.io/part-of: api-preco-extra
+    app.kubernetes.io/project-name: api-preco-extra
+    app.kubernetes.io/release-name: api-preco-extra
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 3-22-8
+    devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+    devops.k8s.io/component-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-name: cnova-preco
+    devops.k8s.io/component-plataform: baixa
+    devops.k8s.io/component-squad: sq-preco
+    devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+    devops.k8s.io/component-system0-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-system0-name: servico-de-preco
+    devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+    devops.k8s.io/component-system0-product0-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-system0-product0-name: precificacao-de-produto
+    devops.k8s.io/component-tribe: tb-preco
+    helm.sh/chart: convair-helm-v0.5.0
+  name: api-preco-extra
+  namespace: api-preco-b2c-sit
+spec:
+  clusterIP: 10.2.0.245
+  clusterIPs:
+  - 10.2.0.245
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    port: 80
+    targetPort: web
+  - name: https
+    port: 443
+    targetPort: web
+  selector:
+    app: api-preco-extra
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: api-preco-b2c-sit
+    artifact.spinnaker.io/name: api-preco-extra
+    artifact.spinnaker.io/type: kubernetes/ingress
+    artifact.spinnaker.io/version: ""
+    devops.k8s.io/branch: release/3.22
+    devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+    devops.k8s.io/component-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-name: cnova-preco
+    devops.k8s.io/component-plataform: 'Baixa '
+    devops.k8s.io/component-repository-url: https://github.com/viavarejo-internal/cnova-preco
+    devops.k8s.io/component-squad: SQ PREÇO
+    devops.k8s.io/component-system0-description: ""
+    devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+    devops.k8s.io/component-system0-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-system0-name: '[Serviço de Preço]'
+    devops.k8s.io/component-system0-product0-description: Ser uma plataforma que centralize
+      todas as precificações 1P, em todos os canais da companhia, bem como gerenciar
+      possíveis divergências de Preços para que o Comercial e Pricing tenham visão
+      completa para tomada de decisão.
+    devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+    devops.k8s.io/component-system0-product0-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-system0-product0-name: Precificação de Produto
+    devops.k8s.io/component-tribe: TB PREÇO
+    devops.k8s.io/flag: ex
+    devops.k8s.io/nexus-url: https://nexus.viavarejo.com.br/repository/charts/api-preco-b2c/3.22-2/deploy-via-sit.yaml
+    devops.k8s.io/project-name: api-preco-extra
+    devops.k8s.io/repository: cnova-preco
+    devops.k8s.io/servicenow-task-number: ""
+    devops.k8s.io/spinnaker: "true"
+    devops.k8s.io/squad: Preço
+    devops.k8s.io/tribe: Inteligência Comercial
+    devops.k8s.io/version: 3.22-8
+    devops.k8s.io/xl-release-start-date: Mon May 20 12:52:30 BRT 2024
+    devops.k8s.io/xl-release-title: '[Preço] api-preco-extra (ex) - 3.22-8'
+    meta.helm.sh/release-name: api-preco-extra
+    meta.helm.sh/release-namespace: api-preco-b2c-sit
+    moniker.spinnaker.io/application: pricing
+    moniker.spinnaker.io/cluster: ingress api-preco-extra
+    strategy.spinnaker.io/versioned: "false"
+    viavarejo.com.br/app: api-preco
+    viavarejo.com.br/team: pricing
+  labels:
+    app: api-preco-extra
+    app.kubernetes.io/deployed-by: spinnaker-helm
+    app.kubernetes.io/environment: sit
+    app.kubernetes.io/instance: api-preco-extra
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: convair-helm
+    app.kubernetes.io/part-of: api-preco-extra
+    app.kubernetes.io/project-name: api-preco-extra
+    app.kubernetes.io/release-name: api-preco-extra
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 3-22-8
+    devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+    devops.k8s.io/component-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-name: cnova-preco
+    devops.k8s.io/component-plataform: baixa
+    devops.k8s.io/component-squad: sq-preco
+    devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+    devops.k8s.io/component-system0-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-system0-name: servico-de-preco
+    devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+    devops.k8s.io/component-system0-product0-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-system0-product0-name: precificacao-de-produto
+    devops.k8s.io/component-tribe: tb-preco
+    helm.sh/chart: convair-helm-v0.5.0
+  name: api-preco-extra
+  namespace: api-preco-b2c-sit
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: api-preco-extra-sit-pricing-hlg.viavarejo.com.br
+    http:
+      paths:
+      - backend:
+          service:
+            name: api-preco-extra
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+      - backend:
+          service:
+            name: api-preco-extra
+            port:
+              number: 443
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - api-preco-extra-sit-pricing-hlg.viavarejo.com.br
+    secretName: viavarejo-tls
+---
+apiVersion: v1
+data:
+  ASPNETCORE_ENVIRONMENT: EX_Development
+  DescontoOnlineConfiguration__BaseAddressDescontoOnline: http://api-desconto-extra.api-desconto-sit.svc.cluster.local
+  DescontoOnlineConfiguration__TextoDescontoMarketplace: no PIX
+kind: ConfigMap
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: api-preco-b2c-sit
+    artifact.spinnaker.io/name: api-preco-extra
+    artifact.spinnaker.io/type: kubernetes/configMap
+    artifact.spinnaker.io/version: ""
+    devops.k8s.io/branch: release/3.22
+    devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+    devops.k8s.io/component-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-name: cnova-preco
+    devops.k8s.io/component-plataform: 'Baixa '
+    devops.k8s.io/component-repository-url: https://github.com/viavarejo-internal/cnova-preco
+    devops.k8s.io/component-squad: SQ PREÇO
+    devops.k8s.io/component-system0-description: ""
+    devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+    devops.k8s.io/component-system0-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-system0-name: '[Serviço de Preço]'
+    devops.k8s.io/component-system0-product0-description: Ser uma plataforma que centralize
+      todas as precificações 1P, em todos os canais da companhia, bem como gerenciar
+      possíveis divergências de Preços para que o Comercial e Pricing tenham visão
+      completa para tomada de decisão.
+    devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+    devops.k8s.io/component-system0-product0-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-system0-product0-name: Precificação de Produto
+    devops.k8s.io/component-tribe: TB PREÇO
+    devops.k8s.io/flag: ex
+    devops.k8s.io/nexus-url: https://nexus.viavarejo.com.br/repository/charts/api-preco-b2c/3.22-2/deploy-via-sit.yaml
+    devops.k8s.io/project-name: api-preco-extra
+    devops.k8s.io/repository: cnova-preco
+    devops.k8s.io/servicenow-task-number: ""
+    devops.k8s.io/spinnaker: "true"
+    devops.k8s.io/squad: Preço
+    devops.k8s.io/tribe: Inteligência Comercial
+    devops.k8s.io/version: 3.22-8
+    devops.k8s.io/xl-release-start-date: Mon May 20 12:52:30 BRT 2024
+    devops.k8s.io/xl-release-title: '[Preço] api-preco-extra (ex) - 3.22-8'
+    meta.helm.sh/release-name: api-preco-extra
+    meta.helm.sh/release-namespace: api-preco-b2c-sit
+    moniker.spinnaker.io/application: pricing
+    moniker.spinnaker.io/cluster: configMap api-preco-extra
+    strategy.spinnaker.io/versioned: "false"
+    viavarejo.com.br/app: api-preco
+    viavarejo.com.br/team: pricing
+  labels:
+    app: api-preco-extra
+    app.kubernetes.io/deployed-by: spinnaker-helm
+    app.kubernetes.io/environment: sit
+    app.kubernetes.io/instance: api-preco-extra
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: convair-helm
+    app.kubernetes.io/part-of: api-preco-extra
+    app.kubernetes.io/project-name: api-preco-extra
+    app.kubernetes.io/release-name: api-preco-extra
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 3-22-8
+    devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+    devops.k8s.io/component-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-name: cnova-preco
+    devops.k8s.io/component-plataform: baixa
+    devops.k8s.io/component-squad: sq-preco
+    devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+    devops.k8s.io/component-system0-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-system0-name: servico-de-preco
+    devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+    devops.k8s.io/component-system0-product0-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-system0-product0-name: precificacao-de-produto
+    devops.k8s.io/component-tribe: tb-preco
+    helm.sh/chart: convair-helm-v0.5.0
+  name: api-preco-extra
+  namespace: api-preco-b2c-sit
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: api-preco-b2c-sit
+    artifact.spinnaker.io/name: api-preco-extra
+    artifact.spinnaker.io/type: kubernetes/horizontalpodautoscaler
+    artifact.spinnaker.io/version: ""
+    devops.k8s.io/branch: release/3.22
+    devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+    devops.k8s.io/component-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-name: cnova-preco
+    devops.k8s.io/component-plataform: 'Baixa '
+    devops.k8s.io/component-repository-url: https://github.com/viavarejo-internal/cnova-preco
+    devops.k8s.io/component-squad: SQ PREÇO
+    devops.k8s.io/component-system0-description: ""
+    devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+    devops.k8s.io/component-system0-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-system0-name: '[Serviço de Preço]'
+    devops.k8s.io/component-system0-product0-description: Ser uma plataforma que centralize
+      todas as precificações 1P, em todos os canais da companhia, bem como gerenciar
+      possíveis divergências de Preços para que o Comercial e Pricing tenham visão
+      completa para tomada de decisão.
+    devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+    devops.k8s.io/component-system0-product0-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-system0-product0-name: Precificação de Produto
+    devops.k8s.io/component-tribe: TB PREÇO
+    devops.k8s.io/flag: ex
+    devops.k8s.io/nexus-url: https://nexus.viavarejo.com.br/repository/charts/api-preco-b2c/3.21-1/deploy-via-sit.yaml
+    devops.k8s.io/project-name: api-preco-extra
+    devops.k8s.io/repository: cnova-preco
+    devops.k8s.io/servicenow-task-number: ""
+    devops.k8s.io/spinnaker: "true"
+    devops.k8s.io/squad: Preço
+    devops.k8s.io/tribe: Inteligência Comercial
+    devops.k8s.io/version: 3.22-8
+    devops.k8s.io/xl-release-start-date: Mon May 20 12:52:30 BRT 2024
+    devops.k8s.io/xl-release-title: '[Preço] api-preco-extra (ex) - 3.22-8'
+    meta.helm.sh/release-name: api-preco-extra
+    meta.helm.sh/release-namespace: api-preco-b2c-sit
+    moniker.spinnaker.io/application: pricing
+    moniker.spinnaker.io/cluster: horizontalpodautoscaler api-preco-extra
+    strategy.spinnaker.io/versioned: "false"
+    viavarejo.com.br/app: api-preco
+    viavarejo.com.br/team: pricing
+  labels:
+    app: api-preco-extra
+    app.kubernetes.io/deployed-by: spinnaker-helm
+    app.kubernetes.io/environment: sit
+    app.kubernetes.io/instance: api-preco-extra
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: convair-helm
+    app.kubernetes.io/part-of: api-preco-extra
+    app.kubernetes.io/project-name: api-preco-extra
+    app.kubernetes.io/release-name: api-preco-extra
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 3-22-8
+    devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+    devops.k8s.io/component-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-name: cnova-preco
+    devops.k8s.io/component-plataform: baixa
+    devops.k8s.io/component-squad: sq-preco
+    devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+    devops.k8s.io/component-system0-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-system0-name: servico-de-preco
+    devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+    devops.k8s.io/component-system0-product0-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-system0-product0-name: precificacao-de-produto
+    devops.k8s.io/component-tribe: tb-preco
+    helm.sh/chart: convair-helm-v0.5.0
+  name: api-preco-extra
+  namespace: api-preco-b2c-sit
+spec:
+  maxReplicas: 1
+  metrics:
+  - resource:
+      name: cpu
+      target:
+        averageUtilization: 70
+        type: Utilization
+    type: Resource
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: api-preco-extra
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: api-preco-b2c-sit
+    artifact.spinnaker.io/name: api-preco-extra-external
+    artifact.spinnaker.io/type: kubernetes/ingress
+    artifact.spinnaker.io/version: ""
+    devops.k8s.io/branch: release/3.22
+    devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+    devops.k8s.io/component-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-name: cnova-preco
+    devops.k8s.io/component-plataform: 'Baixa '
+    devops.k8s.io/component-repository-url: https://github.com/viavarejo-internal/cnova-preco
+    devops.k8s.io/component-squad: SQ PREÇO
+    devops.k8s.io/component-system0-description: ""
+    devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+    devops.k8s.io/component-system0-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-system0-name: '[Serviço de Preço]'
+    devops.k8s.io/component-system0-product0-description: Ser uma plataforma que centralize
+      todas as precificações 1P, em todos os canais da companhia, bem como gerenciar
+      possíveis divergências de Preços para que o Comercial e Pricing tenham visão
+      completa para tomada de decisão.
+    devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+    devops.k8s.io/component-system0-product0-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-system0-product0-name: Precificação de Produto
+    devops.k8s.io/component-tribe: TB PREÇO
+    devops.k8s.io/flag: ex
+    devops.k8s.io/nexus-url: https://nexus.viavarejo.com.br/repository/charts/api-preco-b2c/3.22-2/deploy-via-sit.yaml
+    devops.k8s.io/project-name: api-preco-extra
+    devops.k8s.io/repository: cnova-preco
+    devops.k8s.io/servicenow-task-number: ""
+    devops.k8s.io/spinnaker: "true"
+    devops.k8s.io/squad: Preço
+    devops.k8s.io/tribe: Inteligência Comercial
+    devops.k8s.io/version: 3.22-8
+    devops.k8s.io/xl-release-start-date: Mon May 20 12:52:30 BRT 2024
+    devops.k8s.io/xl-release-title: '[Preço] api-preco-extra (ex) - 3.22-8'
+    meta.helm.sh/release-name: api-preco-extra
+    meta.helm.sh/release-namespace: api-preco-b2c-sit
+    moniker.spinnaker.io/application: pricing
+    moniker.spinnaker.io/cluster: ingress api-preco-extra-external
+    strategy.spinnaker.io/versioned: "false"
+    viavarejo.com.br/app: api-preco
+    viavarejo.com.br/team: pricing
+  labels:
+    app: api-preco-extra
+    app.kubernetes.io/deployed-by: spinnaker-helm
+    app.kubernetes.io/environment: sit
+    app.kubernetes.io/instance: api-preco-extra
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: convair-helm
+    app.kubernetes.io/part-of: api-preco-extra
+    app.kubernetes.io/project-name: api-preco-extra
+    app.kubernetes.io/release-name: api-preco-extra
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 3-22-8
+    devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+    devops.k8s.io/component-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-name: cnova-preco
+    devops.k8s.io/component-plataform: baixa
+    devops.k8s.io/component-squad: sq-preco
+    devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+    devops.k8s.io/component-system0-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-system0-name: servico-de-preco
+    devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+    devops.k8s.io/component-system0-product0-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-system0-product0-name: precificacao-de-produto
+    devops.k8s.io/component-tribe: tb-preco
+    helm.sh/chart: convair-helm-v0.5.0
+  name: api-preco-extra-external
+  namespace: api-preco-b2c-sit
+spec:
+  ingressClassName: nginx-ingress-external
+  rules:
+  - host: api-preco-extra-sit-pricing-hlg.viavarejo.com.br
+    http:
+      paths:
+      - backend:
+          service:
+            name: api-preco-extra
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+      - backend:
+          service:
+            name: api-preco-extra
+            port:
+              number: 443
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - api-preco-extra-sit-pricing-hlg.viavarejo.com.br
+    secretName: viavarejo-tls
+---

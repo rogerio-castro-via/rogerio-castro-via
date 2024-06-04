@@ -1,0 +1,89 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: api-preco-b2c-hlg
+    artifact.spinnaker.io/name: api-preco-extra
+    artifact.spinnaker.io/type: kubernetes/service
+    artifact.spinnaker.io/version: ""
+    devops.k8s.io/branch: release/3.22
+    devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+    devops.k8s.io/component-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-name: cnova-preco
+    devops.k8s.io/component-plataform: 'Baixa '
+    devops.k8s.io/component-repository-url: https://github.com/viavarejo-internal/cnova-preco
+    devops.k8s.io/component-squad: SQ PREÇO
+    devops.k8s.io/component-system0-description: ""
+    devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+    devops.k8s.io/component-system0-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-system0-name: '[Serviço de Preço]'
+    devops.k8s.io/component-system0-product0-description: Ser uma plataforma que centralize
+      todas as precificações 1P, em todos os canais da companhia, bem como gerenciar
+      possíveis divergências de Preços para que o Comercial e Pricing tenham visão
+      completa para tomada de decisão.
+    devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+    devops.k8s.io/component-system0-product0-journey: JN INTELIGÊNCIA COMERCIAL
+    devops.k8s.io/component-system0-product0-name: Precificação de Produto
+    devops.k8s.io/component-tribe: TB PREÇO
+    devops.k8s.io/flag: ex
+    devops.k8s.io/nexus-url: https://nexus.viavarejo.com.br/repository/charts/api-preco-b2c/3.21-1/deploy-via-hlg.yaml
+    devops.k8s.io/project-name: api-preco-extra
+    devops.k8s.io/repository: cnova-preco
+    devops.k8s.io/servicenow-task-number: CHG0321034
+    devops.k8s.io/spinnaker: "true"
+    devops.k8s.io/squad: Preço
+    devops.k8s.io/tribe: Inteligência Comercial
+    devops.k8s.io/version: 3.22-8
+    devops.k8s.io/xl-release-start-date: Mon May 20 12:52:30 BRT 2024
+    devops.k8s.io/xl-release-title: '[Preço] api-preco-extra (ex) - 3.22-8'
+    meta.helm.sh/release-name: api-preco-extra
+    meta.helm.sh/release-namespace: api-preco-b2c-hlg
+    moniker.spinnaker.io/application: pricing
+    moniker.spinnaker.io/cluster: service api-preco-extra
+    strategy.spinnaker.io/versioned: "false"
+    viavarejo.com.br/app: api-preco
+    viavarejo.com.br/team: pricing
+  labels:
+    app: api-preco-extra
+    app.kubernetes.io/deployed-by: spinnaker-helm
+    app.kubernetes.io/environment: hlg
+    app.kubernetes.io/instance: api-preco-extra
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: convair-helm
+    app.kubernetes.io/part-of: api-preco-extra
+    app.kubernetes.io/project-name: api-preco-extra
+    app.kubernetes.io/release-name: api-preco-extra
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 3-22-8
+    devops.k8s.io/component-id: 9a277506-7244-45ed-9713-1388f0755c15
+    devops.k8s.io/component-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-name: cnova-preco
+    devops.k8s.io/component-plataform: baixa
+    devops.k8s.io/component-squad: sq-preco
+    devops.k8s.io/component-system0-id: 1c7ea6fa-c95e-481a-b1f0-6609c0a69120
+    devops.k8s.io/component-system0-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-system0-name: servico-de-preco
+    devops.k8s.io/component-system0-product0-id: 4d552446-6825-4d51-9976-362156f21c22
+    devops.k8s.io/component-system0-product0-journey: jn-inteligencia-comercial
+    devops.k8s.io/component-system0-product0-name: precificacao-de-produto
+    devops.k8s.io/component-tribe: tb-preco
+    helm.sh/chart: convair-helm-v0.5.0
+  name: api-preco-extra
+  namespace: api-preco-b2c-hlg
+spec:
+  clusterIP: 10.2.0.167
+  clusterIPs:
+  - 10.2.0.167
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    port: 80
+    targetPort: web
+  - name: https
+    port: 443
+    targetPort: web
+  selector:
+    app: api-preco-extra

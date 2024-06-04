@@ -1,0 +1,103 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    app.via.com.br/branch: release/2.5.0
+    app.via.com.br/flag: via
+    app.via.com.br/nexus-url: https://nexus.viavarejo.com.br/repository/charts/comercial-bonificacao-redesign-ngx/2.5.0-41/deploy-via-prd.yaml
+    app.via.com.br/project-name: comercial-bonificacao-redesign-ngx
+    app.via.com.br/repository: comercial-bonificacao-redesign-ngx
+    app.via.com.br/servicenow-task-number: CHG0307852
+    app.via.com.br/spinnaker: "true"
+    app.via.com.br/squad: Bonificação
+    app.via.com.br/tribe: Inteligência Comercial
+    app.via.com.br/version: 2.5.0-41
+    app.via.com.br/xl-release-start-date: Wed Mar 06 13:14:16 BRT 2024
+    app.via.com.br/xl-release-title: '[Bonificacao] comercial-bonificacao-redesign-ngx
+      - 2.5.0-41'
+    artifact.spinnaker.io/location: bonificacao-prd
+    artifact.spinnaker.io/name: comercial-bonificacao-redesign-ngx
+    artifact.spinnaker.io/type: kubernetes/deployment
+    artifact.spinnaker.io/version: ""
+    automation.via/restartedAt: "2024-05-14T03:26:32.829575Z"
+    kubectl.kubernetes.io/restartedAt: "2023-10-20T00:14:12-03:00"
+    moniker.spinnaker.io/application: bonificacao
+    moniker.spinnaker.io/cluster: deployment comercial-bonificacao-redesign-ngx
+    strategy.spinnaker.io/versioned: "false"
+  labels:
+    app: comercial-bonificacao-redesign-ngx
+    app.kubernetes.io/deployed-by: spinnaker-artifact-nexus
+    app.kubernetes.io/environment: prd
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: bonificacao
+    app.kubernetes.io/part-of: comercial-bonificacao-redesign-ngx
+    app.kubernetes.io/project-name: comercial-bonificacao-redesign-ngx
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 2.5.0-41
+    deploymentconfig: comercial-bonificacao-redesign-ngx
+    pod-template-hash: 776c5dd4b
+  name: comercial-bonificacao-redesign-ngx-776c5dd4b-7z5gd
+  namespace: bonificacao-prd
+spec:
+  containers:
+  - envFrom:
+    - configMapRef:
+        name: comercial-bonificacao-redesign-ngx-gc7d47fhht
+    image: harbor01.viavarejo.com.br/bonificacao/comercial-bonificacao-redesign-ngx:2.5.0-41
+    livenessProbe:
+      httpGet:
+        port: 8080
+      initialDelaySeconds: 180
+      timeoutSeconds: 2
+    name: comercial-bonificacao-redesign-ngx
+    ports:
+    - containerPort: 8080
+    readinessProbe:
+      httpGet:
+        port: 8080
+      initialDelaySeconds: 10
+      timeoutSeconds: 5
+    resources:
+      limits:
+        cpu: 100m
+        memory: 512Mi
+      requests:
+        memory: 128Mi
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-4wpgn
+      readOnly: true
+  nodeSelector:
+    agentpool: boniapp
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  serviceAccountName: default
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: kube-api-access-4wpgn
+    projected:
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              fieldPath: metadata.namespace
+            path: namespace

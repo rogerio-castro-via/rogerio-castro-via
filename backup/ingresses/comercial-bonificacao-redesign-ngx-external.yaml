@@ -1,0 +1,61 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    app.via.com.br/branch: release/2.5.0
+    app.via.com.br/flag: via
+    app.via.com.br/nexus-url: https://nexus.viavarejo.com.br/repository/charts/comercial-bonificacao-redesign-ngx/2.5.0-41/deploy-via-prd.yaml
+    app.via.com.br/project-name: comercial-bonificacao-redesign-ngx
+    app.via.com.br/repository: comercial-bonificacao-redesign-ngx
+    app.via.com.br/servicenow-task-number: CHG0307852
+    app.via.com.br/spinnaker: "true"
+    app.via.com.br/squad: Bonificação
+    app.via.com.br/tribe: Inteligência Comercial
+    app.via.com.br/version: 2.5.0-41
+    app.via.com.br/xl-release-start-date: Wed Mar 06 13:14:16 BRT 2024
+    app.via.com.br/xl-release-title: '[Bonificacao] comercial-bonificacao-redesign-ngx
+      - 2.5.0-41'
+    artifact.spinnaker.io/location: bonificacao-prd
+    artifact.spinnaker.io/name: comercial-bonificacao-redesign-ngx-external
+    artifact.spinnaker.io/type: kubernetes/ingress
+    artifact.spinnaker.io/version: ""
+    moniker.spinnaker.io/application: bonificacao
+    moniker.spinnaker.io/cluster: ingress comercial-bonificacao-redesign-ngx-external
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    strategy.spinnaker.io/versioned: "false"
+  labels:
+    app: comercial-bonificacao-redesign-ngx
+    app.kubernetes.io/deployed-by: spinnaker-artifact-nexus
+    app.kubernetes.io/environment: prd
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: bonificacao
+    app.kubernetes.io/part-of: comercial-bonificacao-redesign-ngx-external
+    app.kubernetes.io/project-name: comercial-bonificacao-redesign-ngx
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 2.5.0-41
+  name: comercial-bonificacao-redesign-ngx-external
+  namespace: bonificacao-prd
+spec:
+  ingressClassName: nginx-ingress-external
+  rules:
+  - host: bonificacao.viavarejo.com.br
+    http:
+      paths:
+      - backend:
+          service:
+            name: comercial-bonificacao-redesign-ngx
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+      - backend:
+          service:
+            name: comercial-bonificacao-redesign-ngx
+            port:
+              number: 443
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - bonificacao.viavarejo.com.br
+    secretName: viavarejo-tls

@@ -1,0 +1,166 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    app.via.com.br/branch: release/3.17
+    app.via.com.br/flag: via
+    app.via.com.br/nexus-url: https://nexus.viavarejo.com.br/repository/charts/api-preco-b2c/3.17-4/deploy-via-prd.yaml
+    app.via.com.br/project-name: api-preco-b2c
+    app.via.com.br/repository: api-preco-b2c
+    app.via.com.br/servicenow-task-number: CHG0297997
+    app.via.com.br/spinnaker: "true"
+    app.via.com.br/squad: Preço
+    app.via.com.br/tribe: Inteligência Comercial
+    app.via.com.br/version: 3.17-4
+    app.via.com.br/xl-release-start-date: Mon Jan 08 17:40:07 BRT 2024
+    app.via.com.br/xl-release-title: '[Preço] api-preco-b2c - 3.17-4'
+    artifact.spinnaker.io/location: api-preco-b2c-prd
+    artifact.spinnaker.io/name: api-preco-casasbahia
+    artifact.spinnaker.io/type: kubernetes/deployment
+    artifact.spinnaker.io/version: ""
+    deployment.kubernetes.io/revision: "487"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"app.via.com.br/branch":"release/3.17","app.via.com.br/flag":"via","app.via.com.br/nexus-url":"https://nexus.viavarejo.com.br/repository/charts/api-preco-b2c/3.17-4/deploy-via-prd.yaml","app.via.com.br/project-name":"api-preco-b2c","app.via.com.br/repository":"api-preco-b2c","app.via.com.br/servicenow-task-number":"CHG0297997","app.via.com.br/spinnaker":"true","app.via.com.br/squad":"Preço","app.via.com.br/tribe":"Inteligência Comercial","app.via.com.br/version":"3.17-4","app.via.com.br/xl-release-start-date":"Mon Jan 08 17:40:07 BRT 2024","app.via.com.br/xl-release-title":"[Preço] api-preco-b2c - 3.17-4","artifact.spinnaker.io/location":"api-preco-b2c-prd","artifact.spinnaker.io/name":"api-preco-casasbahia","artifact.spinnaker.io/type":"kubernetes/deployment","artifact.spinnaker.io/version":"","moniker.spinnaker.io/application":"pricing","moniker.spinnaker.io/cluster":"deployment api-preco-casasbahia","strategy.spinnaker.io/versioned":"false","viavarejo.com.br/app":"api-preco","viavarejo.com.br/environment":"prd","viavarejo.com.br/team":"pricing"},"labels":{"app":"api-preco-casasbahia","app.kubernetes.io/deployed-by":"spinnaker-artifact-nexus","app.kubernetes.io/environment":"prd","app.kubernetes.io/managed-by":"spinnaker","app.kubernetes.io/name":"pricing","app.kubernetes.io/part-of":"api-preco-casasbahia","app.kubernetes.io/project-name":"api-preco-b2c","app.kubernetes.io/stage":"stable","app.kubernetes.io/version":"3.17-4"},"name":"api-preco-casasbahia","namespace":"api-preco-b2c-prd"},"spec":{"replicas":2,"selector":{"matchLabels":{"app":"api-preco-casasbahia"}},"strategy":{"rollingUpdate":{"maxSurge":"25%","maxUnavailable":"25%"},"type":"RollingUpdate"},"template":{"metadata":{"annotations":{"app.via.com.br/branch":"release/3.17","app.via.com.br/flag":"via","app.via.com.br/nexus-url":"https://nexus.viavarejo.com.br/repository/charts/api-preco-b2c/3.17-4/deploy-via-prd.yaml","app.via.com.br/project-name":"api-preco-b2c","app.via.com.br/repository":"api-preco-b2c","app.via.com.br/servicenow-task-number":"CHG0297997","app.via.com.br/spinnaker":"true","app.via.com.br/squad":"Preço","app.via.com.br/tribe":"Inteligência Comercial","app.via.com.br/version":"3.17-4","app.via.com.br/xl-release-start-date":"Mon Jan 08 17:40:07 BRT 2024","app.via.com.br/xl-release-title":"[Preço] api-preco-b2c - 3.17-4","artifact.spinnaker.io/location":"api-preco-b2c-prd","artifact.spinnaker.io/name":"api-preco-casasbahia","artifact.spinnaker.io/type":"kubernetes/deployment","artifact.spinnaker.io/version":"","moniker.spinnaker.io/application":"pricing","moniker.spinnaker.io/cluster":"deployment api-preco-casasbahia","strategy.spinnaker.io/versioned":"false","viavarejo.com.br/app":"api-preco","viavarejo.com.br/team":"pricing"},"labels":{"app":"api-preco-casasbahia","app.kubernetes.io/deployed-by":"spinnaker-artifact-nexus","app.kubernetes.io/environment":"prd","app.kubernetes.io/managed-by":"spinnaker","app.kubernetes.io/name":"pricing","app.kubernetes.io/part-of":"api-preco-casasbahia","app.kubernetes.io/project-name":"api-preco-b2c","app.kubernetes.io/stage":"stable","app.kubernetes.io/version":"3.17-4"}},"spec":{"containers":[{"envFrom":[{"configMapRef":{"name":"api-preco-casasbahia"}}],"image":"harbor01.viavarejo.com.br/pricing/api-preco-b2c:3.17-4","livenessProbe":{"httpGet":{"path":"/health","port":"web"},"initialDelaySeconds":25,"periodSeconds":40,"timeoutSeconds":5},"name":"api-preco-casasbahia","ports":[{"containerPort":80,"name":"web"}],"readinessProbe":{"httpGet":{"path":"/readness","port":"web"},"initialDelaySeconds":15,"periodSeconds":40,"successThreshold":1,"timeoutSeconds":5},"resources":{"limits":{"cpu":"500m","memory":"1Gi"},"requests":{"cpu":"500m","memory":"1Gi"}}}],"dnsPolicy":"ClusterFirst","hostAliases":[{"hostnames":["catalogo.casasbahia.com.br"],"ip":"10.106.24.16"}],"nodeSelector":{"app":"preco-cb"}}}}}
+    moniker.spinnaker.io/application: pricing
+    moniker.spinnaker.io/cluster: deployment api-preco-casasbahia
+    strategy.spinnaker.io/versioned: "false"
+    viavarejo.com.br/app: api-preco
+    viavarejo.com.br/environment: prd
+    viavarejo.com.br/team: pricing
+  creationTimestamp: "2020-08-18T22:00:27Z"
+  generation: 3650
+  labels:
+    app: api-preco-casasbahia
+    app.kubernetes.io/deployed-by: spinnaker-artifact-nexus
+    app.kubernetes.io/environment: prd
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: pricing
+    app.kubernetes.io/part-of: api-preco-casasbahia
+    app.kubernetes.io/project-name: api-preco-b2c
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 3.17-4
+  name: api-preco-casasbahia
+  namespace: api-preco-b2c-prd
+  resourceVersion: "1415038088"
+  uid: 1453835f-981a-4e73-ad72-3677f1579808
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 90
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: api-preco-casasbahia
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        app.via.com.br/branch: release/3.17
+        app.via.com.br/flag: via
+        app.via.com.br/nexus-url: https://nexus.viavarejo.com.br/repository/charts/api-preco-b2c/3.17-4/deploy-via-prd.yaml
+        app.via.com.br/project-name: api-preco-b2c
+        app.via.com.br/repository: api-preco-b2c
+        app.via.com.br/servicenow-task-number: CHG0297997
+        app.via.com.br/spinnaker: "true"
+        app.via.com.br/squad: Preço
+        app.via.com.br/tribe: Inteligência Comercial
+        app.via.com.br/version: 3.17-4
+        app.via.com.br/xl-release-start-date: Mon Jan 08 17:40:07 BRT 2024
+        app.via.com.br/xl-release-title: '[Preço] api-preco-b2c - 3.17-4'
+        artifact.spinnaker.io/location: api-preco-b2c-prd
+        artifact.spinnaker.io/name: api-preco-casasbahia
+        artifact.spinnaker.io/type: kubernetes/deployment
+        artifact.spinnaker.io/version: ""
+        automation.via/restartedAt: "2024-03-25T06:01:18.407519Z"
+        k8s.viavarejo.com.br/forced-restart: "2021-12-07T18:39:41+00:00"
+        kubectl.kubernetes.io/restartedAt: "2024-03-22T00:17:21-03:00"
+        moniker.spinnaker.io/application: pricing
+        moniker.spinnaker.io/cluster: deployment api-preco-casasbahia
+        strategy.spinnaker.io/versioned: "false"
+        viavarejo.com.br/app: api-preco
+        viavarejo.com.br/team: pricing
+      creationTimestamp: null
+      labels:
+        app: api-preco-casasbahia
+        app.kubernetes.io/deployed-by: spinnaker-artifact-nexus
+        app.kubernetes.io/environment: prd
+        app.kubernetes.io/managed-by: spinnaker
+        app.kubernetes.io/name: pricing
+        app.kubernetes.io/part-of: api-preco-casasbahia
+        app.kubernetes.io/project-name: api-preco-b2c
+        app.kubernetes.io/stage: stable
+        app.kubernetes.io/version: 3.17-4
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: api-preco-casasbahia
+        image: harbor01.viavarejo.com.br/pricing/api-preco-b2c-prd/api-preco-b2c:3.14-1
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /health
+            port: web
+            scheme: HTTP
+          initialDelaySeconds: 25
+          periodSeconds: 40
+          successThreshold: 1
+          timeoutSeconds: 5
+        name: api-preco-casasbahia
+        ports:
+        - containerPort: 80
+          name: web
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /readness
+            port: web
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 40
+          successThreshold: 1
+          timeoutSeconds: 5
+        resources:
+          limits:
+            cpu: 600m
+            memory: 1Gi
+          requests:
+            cpu: 600m
+            memory: 1Gi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      hostAliases:
+      - hostnames:
+        - catalogo.casasbahia.com.br
+        ip: 10.106.24.16
+      nodeSelector:
+        app: preco-cb
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 90
+  conditions:
+  - lastTransitionTime: "2024-03-22T03:18:55Z"
+    lastUpdateTime: "2024-03-22T03:18:55Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-05-26T03:33:40Z"
+    lastUpdateTime: "2024-03-25T06:02:54Z"
+    message: ReplicaSet "api-preco-casasbahia-679467589d" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 3650
+  readyReplicas: 90
+  replicas: 90
+  updatedReplicas: 90

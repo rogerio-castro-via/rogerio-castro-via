@@ -1,0 +1,166 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "0"
+    deployment.kubernetes.io/max-replicas: "0"
+    deployment.kubernetes.io/revision: "11"
+  labels:
+    app: comercial-bonificacao-api
+    deploymentconfig: comercial-bonificacao-scheduler-ex
+    pod-template-hash: 6bdfcc498c
+  name: comercial-bonificacao-scheduler-ex-6bdfcc498c
+  namespace: bonificacao-prd
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: comercial-bonificacao-api
+      pod-template-hash: 6bdfcc498c
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/restartedAt: "2021-04-07T19:26:39-03:00"
+      creationTimestamp: null
+      labels:
+        app: comercial-bonificacao-api
+        deploymentconfig: comercial-bonificacao-scheduler-ex
+        pod-template-hash: 6bdfcc498c
+    spec:
+      containers:
+      - env:
+        - name: DATASOURCE_URL
+          valueFrom:
+            secretKeyRef:
+              key: DATASOURCE_URL
+              name: postgres-bonificacao
+        - name: DATASOURCE_USERNAME
+          valueFrom:
+            secretKeyRef:
+              key: DATASOURCE_USERNAME
+              name: postgres-bonificacao
+        - name: DATASOURCE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: DATASOURCE_PASSWORD
+              name: postgres-bonificacao
+        - name: SECURITY_JWT_CLIENT_ID
+          valueFrom:
+            secretKeyRef:
+              key: SECURITY_JWT_CLIENT_ID
+              name: jwt-bonificacao
+        - name: SECURITY_JWT_CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              key: SECURITY_JWT_CLIENT_SECRET
+              name: jwt-bonificacao
+        - name: SECURITY_JWT_SIGNING_KEY
+          valueFrom:
+            secretKeyRef:
+              key: SECURITY_JWT_SIGNING_KEY
+              name: jwt-bonificacao
+        - name: SECURITY_JWT_COMERCIAL_APP
+          valueFrom:
+            secretKeyRef:
+              key: SECURITY_JWT_COMERCIAL_APP
+              name: jwt-comercial
+        - name: SECURITY_JWT_COMERCIAL_SECRET
+          valueFrom:
+            secretKeyRef:
+              key: SECURITY_JWT_COMERCIAL_SECRET
+              name: jwt-comercial
+        - name: LN_DATASOURCE_URL
+          valueFrom:
+            secretKeyRef:
+              key: LN_DATASOURCE_URL
+              name: ln-bonificacao
+        - name: LN_DATASOURCE_USERNAME
+          valueFrom:
+            secretKeyRef:
+              key: LN_DATASOURCE_USERNAME
+              name: ln-bonificacao
+        - name: LN_DATASOURCE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: LN_DATASOURCE_PASSWORD
+              name: ln-bonificacao
+        - name: LN_DATASOURCE_DRIVER_CLASS_NAME
+          valueFrom:
+            secretKeyRef:
+              key: LN_DATASOURCE_DRIVER_CLASS_NAME
+              name: ln-bonificacao
+        - name: LN_TEST_WHILE_IDLE
+          valueFrom:
+            secretKeyRef:
+              key: LN_TEST_WHILE_IDLE
+              name: ln-bonificacao
+        - name: LN_VALIDATION_QUERY
+          valueFrom:
+            secretKeyRef:
+              key: LN_VALIDATION_QUERY
+              name: ln-bonificacao
+        - name: AZURE_ACTIVEDIRECTORY_SESSION_STATELESS
+          valueFrom:
+            secretKeyRef:
+              key: AZURE_ACTIVEDIRECTORY_SESSION_STATELESS
+              name: azure-ad-bonificacao
+        - name: AZURE_ACTIVEDIRECTORY_CLIENT_ID
+          valueFrom:
+            secretKeyRef:
+              key: AZURE_ACTIVEDIRECTORY_CLIENT_ID
+              name: azure-ad-bonificacao
+        - name: AZURE_ACTIVEDIRECTORY_CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              key: AZURE_ACTIVEDIRECTORY_CLIENT_SECRET
+              name: azure-ad-bonificacao
+        - name: AZURE_ACTIVEDIRECTORY_USER_GROUP_ALLOWED_GROUPS
+          valueFrom:
+            secretKeyRef:
+              key: AZURE_ACTIVEDIRECTORY_USER_GROUP_ALLOWED_GROUPS
+              name: azure-ad-bonificacao
+        envFrom:
+        - configMapRef:
+            name: comercial-bonificacao-scheduler-ex-kktfkfcttk
+        image: harbor01.viavarejo.com.br/bonificacao/bonificacao-prd/comercial-bonificacao-api:4.0.0-37
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /actuator/health
+            port: 8090
+            scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 3600
+          successThreshold: 1
+          timeoutSeconds: 3600
+        name: comercial-bonificacao-scheduler-ex
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /actuator/health
+            port: 8090
+            scheme: HTTP
+          initialDelaySeconds: 20
+          periodSeconds: 3600
+          successThreshold: 3
+          timeoutSeconds: 3600
+        resources:
+          limits:
+            cpu: 512m
+            memory: 1Gi
+          requests:
+            cpu: 512m
+            memory: 1Gi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        agentpool: bonoapp
+        app: bonoapp
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30

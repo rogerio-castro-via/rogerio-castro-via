@@ -1,0 +1,1 @@
+Namespace 'gatekeeper-system' not found in cluster akspriv-marketplace-hlg-admin

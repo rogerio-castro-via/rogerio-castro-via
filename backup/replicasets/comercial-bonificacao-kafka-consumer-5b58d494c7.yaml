@@ -1,0 +1,192 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    app.via.com.br/branch: release/1.2.0
+    app.via.com.br/flag: via
+    app.via.com.br/nexus-url: https://nexus.viavarejo.com.br/repository/charts/comercial-bonificacao-kafka-consumer/1.2.0-4/deploy-via-prd.yaml
+    app.via.com.br/project-name: comercial-bonificacao-kafka-consumer
+    app.via.com.br/repository: comercial-bonificacao-kafka-consumer
+    app.via.com.br/servicenow-task-number: CHG0303394
+    app.via.com.br/spinnaker: "true"
+    app.via.com.br/squad: Bonificação
+    app.via.com.br/tribe: Inteligência Comercial
+    app.via.com.br/version: 1.2.0-4
+    app.via.com.br/xl-release-start-date: Wed Feb 07 14:05:33 BRT 2024
+    app.via.com.br/xl-release-title: '[Bonificacao] comercial-bonificacao-kafka-consumer
+      - 1.2.0-4'
+    artifact.spinnaker.io/location: bonificacao-prd
+    artifact.spinnaker.io/name: comercial-bonificacao-kafka-consumer
+    artifact.spinnaker.io/type: kubernetes/deployment
+    artifact.spinnaker.io/version: ""
+    deployment.kubernetes.io/desired-replicas: "3"
+    deployment.kubernetes.io/max-replicas: "4"
+    deployment.kubernetes.io/revision: "34"
+    moniker.spinnaker.io/application: bonificacao
+    moniker.spinnaker.io/cluster: deployment comercial-bonificacao-kafka-consumer
+    strategy.spinnaker.io/versioned: "false"
+  labels:
+    app: comercial-bonificacao-kafka-consumer
+    app.kubernetes.io/deployed-by: spinnaker-artifact-nexus
+    app.kubernetes.io/environment: prd
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: bonificacao
+    app.kubernetes.io/part-of: comercial-bonificacao-kafka-consumer
+    app.kubernetes.io/project-name: comercial-bonificacao-kafka-consumer
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 1.2.0-4
+    deploymentconfig: comercial-bonificacao-kafka-consumer
+    pod-template-hash: 5b58d494c7
+  name: comercial-bonificacao-kafka-consumer-5b58d494c7
+  namespace: bonificacao-prd
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: comercial-bonificacao-kafka-consumer
+      pod-template-hash: 5b58d494c7
+  template:
+    metadata:
+      annotations:
+        app.via.com.br/branch: release/1.2.0
+        app.via.com.br/flag: via
+        app.via.com.br/nexus-url: https://nexus.viavarejo.com.br/repository/charts/comercial-bonificacao-kafka-consumer/1.2.0-4/deploy-via-prd.yaml
+        app.via.com.br/project-name: comercial-bonificacao-kafka-consumer
+        app.via.com.br/repository: comercial-bonificacao-kafka-consumer
+        app.via.com.br/servicenow-task-number: CHG0303394
+        app.via.com.br/spinnaker: "true"
+        app.via.com.br/squad: Bonificação
+        app.via.com.br/tribe: Inteligência Comercial
+        app.via.com.br/version: 1.2.0-4
+        app.via.com.br/xl-release-start-date: Wed Feb 07 14:05:33 BRT 2024
+        app.via.com.br/xl-release-title: '[Bonificacao] comercial-bonificacao-kafka-consumer
+          - 1.2.0-4'
+        artifact.spinnaker.io/location: bonificacao-prd
+        artifact.spinnaker.io/name: comercial-bonificacao-kafka-consumer
+        artifact.spinnaker.io/type: kubernetes/deployment
+        artifact.spinnaker.io/version: ""
+        automation.via/restartedAt: "2024-04-15T06:00:11.135799Z"
+        kubectl.kubernetes.io/restartedAt: "2024-02-07T17:58:23Z"
+        moniker.spinnaker.io/application: bonificacao
+        moniker.spinnaker.io/cluster: deployment comercial-bonificacao-kafka-consumer
+        strategy.spinnaker.io/versioned: "false"
+      creationTimestamp: null
+      labels:
+        app: comercial-bonificacao-kafka-consumer
+        app.kubernetes.io/deployed-by: spinnaker-artifact-nexus
+        app.kubernetes.io/environment: prd
+        app.kubernetes.io/managed-by: spinnaker
+        app.kubernetes.io/name: bonificacao
+        app.kubernetes.io/part-of: comercial-bonificacao-kafka-consumer
+        app.kubernetes.io/project-name: comercial-bonificacao-kafka-consumer
+        app.kubernetes.io/stage: stable
+        app.kubernetes.io/version: 1.2.0-4
+        deploymentconfig: comercial-bonificacao-kafka-consumer
+        pod-template-hash: 5b58d494c7
+    spec:
+      containers:
+      - env:
+        - name: DATASOURCE_URL
+          valueFrom:
+            secretKeyRef:
+              key: DATASOURCE_URL
+              name: postgres-bonificacao
+        - name: DATASOURCE_USERNAME
+          valueFrom:
+            secretKeyRef:
+              key: DATASOURCE_USERNAME
+              name: postgres-bonificacao
+        - name: DATASOURCE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: DATASOURCE_PASSWORD
+              name: postgres-bonificacao
+        - name: LN_DATASOURCE_URL
+          valueFrom:
+            secretKeyRef:
+              key: LN_DATASOURCE_URL
+              name: ln-bonificacao
+        - name: LN_DATASOURCE_USERNAME
+          valueFrom:
+            secretKeyRef:
+              key: LN_DATASOURCE_USERNAME
+              name: ln-bonificacao
+        - name: LN_DATASOURCE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: LN_DATASOURCE_PASSWORD
+              name: ln-bonificacao
+        - name: LN_DATASOURCE_DRIVER_CLASS_NAME
+          valueFrom:
+            secretKeyRef:
+              key: LN_DATASOURCE_DRIVER_CLASS_NAME
+              name: ln-bonificacao
+        - name: LN_TEST_WHILE_IDLE
+          valueFrom:
+            secretKeyRef:
+              key: LN_TEST_WHILE_IDLE
+              name: ln-bonificacao
+        - name: LN_VALIDATION_QUERY
+          valueFrom:
+            secretKeyRef:
+              key: LN_VALIDATION_QUERY
+              name: ln-bonificacao
+        - name: SERVICENOW_URL
+          valueFrom:
+            secretKeyRef:
+              key: SERVICENOW_URL
+              name: servicenow-api-bonificacao
+        - name: SERVICENOW_USER
+          valueFrom:
+            secretKeyRef:
+              key: SERVICENOW_USER
+              name: servicenow-api-bonificacao
+        - name: SERVICENOW_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: SERVICENOW_PASSWORD
+              name: servicenow-api-bonificacao
+        envFrom:
+        - configMapRef:
+            name: comercial-bonificacao-kafka-consumer-9bmdb8bm9t
+        image: harbor01.viavarejo.com.br/bonificacao/comercial-bonificacao-kafka-consumer:1.2.0-4
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /actuator/health
+            port: 8090
+            scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 60
+          successThreshold: 1
+          timeoutSeconds: 5
+        name: comercial-bonificacao-kafka-consumer
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /actuator/health
+            port: 8090
+            scheme: HTTP
+          initialDelaySeconds: 180
+          periodSeconds: 60
+          successThreshold: 3
+          timeoutSeconds: 5
+        resources:
+          limits:
+            cpu: 500m
+            memory: 2Gi
+          requests:
+            cpu: 300m
+            memory: 768Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        agentpool: boniapp
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30

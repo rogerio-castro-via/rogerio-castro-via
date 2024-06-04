@@ -1,0 +1,21 @@
+__________________________________________________________________________________________
+>>> Deprecated APIs removed in 1.22 <<<
+------------------------------------------------------------------------------------------
+KIND                 NAMESPACE                NAME                                        API_VERSION                         REPLACE_WITH (SINCE)
+Role                 ingress-nginx-external   nginx-ingress-role                          rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+ClusterRoleBinding   <undefined>              nginx-ingress-clusterrole-nisa-binding      rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+Ingress              adanalytics-stg          comercial-sortimento-api-internal           extensions/v1beta1                  networking.k8s.io/v1 (1.19.0)
+Ingress              adanalytics-sit          comercial-sortimento-labs2-ngx-internal     extensions/v1beta1                  networking.k8s.io/v1 (1.19.0)
+Ingress              adanalytics-sit          comercial-sortimento-labs-ngx-internal      extensions/v1beta1                  networking.k8s.io/v1 (1.19.0)
+Ingress              adanalytics-sit          comercial-sortimento-indicadores-internal   extensions/v1beta1                  networking.k8s.io/v1 (1.19.0)
+Role                 ingress-nginx            nginx-ingress-role                          rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+ClusterRole          <undefined>              nginx-ingress-clusterrole                   rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+RoleBinding          ingress-nginx            nginx-ingress-role-nisa-binding             rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+RoleBinding          ingress-nginx-external   nginx-ingress-role-nisa-binding             rbac.authorization.k8s.io/v1beta1   rbac.authorization.k8s.io/v1 (1.8.0)
+StorageClass         <undefined>              default                                     storage.k8s.io/v1beta1              storage.k8s.io/v1 (1.6.0)
+__________________________________________________________________________________________
+>>> Deprecated APIs removed in 1.25 <<<
+------------------------------------------------------------------------------------------
+KIND                      NAMESPACE                NAME                 API_VERSION           REPLACE_WITH (SINCE)
+HorizontalPodAutoscaler   ingress-nginx-external   nginx-external-hpa   autoscaling/v2beta1   autoscaling/v2 (1.23.0)
+HorizontalPodAutoscaler   ingress-nginx            nginx-external-hpa   autoscaling/v2beta1   autoscaling/v2 (1.23.0)

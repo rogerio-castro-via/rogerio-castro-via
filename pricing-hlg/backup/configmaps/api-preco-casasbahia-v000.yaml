@@ -1,0 +1,26 @@
+apiVersion: v1
+data:
+  ASPNETCORE_ENVIRONMENT: CB_Homolog
+  DescontoOnlineConfiguration__BaseAddressDescontoOnline: http://api-desconto-casasbahia.api-desconto-hlg.svc.cluster.local
+  DescontoOnlineConfiguration__TextoDescontoMarketplace: em 1x no Cartão, Boleto ou
+    Pix.
+kind: ConfigMap
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: api-preco-b2c-hlg
+    artifact.spinnaker.io/name: api-preco-casasbahia
+    artifact.spinnaker.io/type: kubernetes/configMap
+    artifact.spinnaker.io/version: v000
+    moniker.spinnaker.io/application: pricing
+    moniker.spinnaker.io/cluster: configMap api-preco-casasbahia
+    moniker.spinnaker.io/sequence: "0"
+    viavarejo.com.br/app: api-preco
+    viavarejo.com.br/team: pricing
+  labels:
+    app: api-preco-casasbahia
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: pricing
+    k8slens-edit-resource-version: v1
+    moniker.spinnaker.io/sequence: "0"
+  name: api-preco-casasbahia-v000
+  namespace: api-preco-b2c-hlg

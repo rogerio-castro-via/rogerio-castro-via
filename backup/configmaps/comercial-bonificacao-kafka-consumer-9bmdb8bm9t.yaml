@@ -1,0 +1,49 @@
+apiVersion: v1
+data:
+  COMERCIAL_BONIFICACAO_API_LOGGER_REST_ENABLED: "false"
+  JVM_OPTS: -Xmx1536m -Xms512m
+  KAFKA_BOOTSTRAP_SERVERS_1: kfk-iidr-prd01.dc.nova:6661,kfk-iidr-prd02.dc.nova:6661,kfk-iidr-prd03.dc.nova:6661,kfk-iidr-b-prd01.dc.nova:6662,kfk-iidr-b-prd02.dc.nova:6662,kfk-iidr-b-prd03.dc.nova:6662
+  KAFKA_BOOTSTRAP_SERVERS_2: kfk-iidr-b-prd01.dc.nova:6662,kfk-iidr-b-prd02.dc.nova:6662,kfk-iidr-b-prd03.dc.nova:6662
+  KAFKA_CONSUMER_TOPICS_AGP_FNE: KFK200.j2.prdbat.agp_fne
+  KAFKA_CONSUMER_TOPICS_FNE: KFK200.j2.prdbat.fne
+  KAFKA_CONSUMER_TOPICS_SET_MCR: KFK104.s1.prdbat.set_mcr
+  LOGGING_LEVEL_SPRING_SECURITY: ERROR
+  LOGGING_LEVEL_SPRING_WEB: ERROR
+  LOGGING_LEVEL_SPRING_WEB_FILTER: ERROR
+  LOGGING_LEVEL_VV: ERROR
+  VM_ARGS: -Dfile.encoding=UTF-8 -Duser.timezone=America/Buenos_Aires -Dspring.profiles.active=docker
+kind: ConfigMap
+metadata:
+  annotations:
+    app.via.com.br/branch: release/1.2.0
+    app.via.com.br/flag: via
+    app.via.com.br/nexus-url: https://nexus.viavarejo.com.br/repository/charts/comercial-bonificacao-kafka-consumer/1.2.0-4/deploy-via-prd.yaml
+    app.via.com.br/project-name: comercial-bonificacao-kafka-consumer
+    app.via.com.br/repository: comercial-bonificacao-kafka-consumer
+    app.via.com.br/servicenow-task-number: CHG0303394
+    app.via.com.br/spinnaker: "true"
+    app.via.com.br/squad: Bonificação
+    app.via.com.br/tribe: Inteligência Comercial
+    app.via.com.br/version: 1.2.0-4
+    app.via.com.br/xl-release-start-date: Wed Feb 07 14:05:33 BRT 2024
+    app.via.com.br/xl-release-title: '[Bonificacao] comercial-bonificacao-kafka-consumer
+      - 1.2.0-4'
+    artifact.spinnaker.io/location: bonificacao-prd
+    artifact.spinnaker.io/name: comercial-bonificacao-kafka-consumer-9bmdb8bm9t
+    artifact.spinnaker.io/type: kubernetes/configMap
+    artifact.spinnaker.io/version: ""
+    moniker.spinnaker.io/application: bonificacao
+    moniker.spinnaker.io/cluster: configMap comercial-bonificacao-kafka-consumer-9bmdb8bm9t
+    strategy.spinnaker.io/versioned: "false"
+  labels:
+    app: comercial-bonificacao-kafka-consumer
+    app.kubernetes.io/deployed-by: spinnaker-artifact-nexus
+    app.kubernetes.io/environment: prd
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: bonificacao
+    app.kubernetes.io/part-of: comercial-bonificacao-kafka-consumer-9bmdb8bm9t
+    app.kubernetes.io/project-name: comercial-bonificacao-kafka-consumer
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 1.2.0-4
+  name: comercial-bonificacao-kafka-consumer-9bmdb8bm9t
+  namespace: bonificacao-prd

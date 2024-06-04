@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "0"
+    deployment.kubernetes.io/max-replicas: "0"
+    deployment.kubernetes.io/revision: "29"
+  labels:
+    app: comercial-bonificacao-ngx
+    deploymentconfig: comercial-bonificacao-ngx
+    pod-template-hash: 59986d75f4
+  name: comercial-bonificacao-ngx-59986d75f4
+  namespace: bonificacao-prd
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: comercial-bonificacao-ngx
+      pod-template-hash: 59986d75f4
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/restartedAt: "2020-12-15T00:58:30-03:00"
+      creationTimestamp: null
+      labels:
+        app: comercial-bonificacao-ngx
+        deploymentconfig: comercial-bonificacao-ngx
+        pod-template-hash: 59986d75f4
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: comercial-bonificacao-ngx-9mb6mht5tb
+        image: harbor01.viavarejo.com.br/bonificacao/bonificacao-prd/comercial-bonificacao-ngx:5.4.1-2
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 180
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 2
+        name: comercial-bonificacao-ngx
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+        resources:
+          limits:
+            cpu: 300m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 512Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        app: bonoapp
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30

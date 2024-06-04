@@ -1,0 +1,264 @@
+admin-backend-preco-frete-comercial-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+admin-backend-preco-frete-comercial-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+admin-backend-preco-frete-comercial-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+admin-backend-preco-frete-comercial-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+admin-backend-preco-frete-comercial-prd	NAME
+default-token-ffs9n	Jul 16 16:37:25 2050 GMT
+admin-backend-preco-frete-comercial-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+admin-backend-preco-frete-comercial-prd	NAME
+pontofrio-tls	Sep 12 23:59:59 2024 GMT
+admin-backend-preco-frete-comercial-prd	NAME
+via-tls	Jun 10 23:59:59 2024 GMT
+admin-preco-b2c-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+admin-preco-b2c-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+admin-preco-b2c-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+admin-preco-b2c-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+admin-preco-b2c-prd	NAME
+default-token-gft2s	Jul 16 16:37:25 2050 GMT
+admin-preco-b2c-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+admin-preco-b2c-prd	NAME
+pontofrio-tls	Sep 12 23:59:59 2024 GMT
+api-desconto-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+api-desconto-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+api-desconto-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+api-desconto-prd	NAME
+default-token-dljcw	Jul 16 16:37:25 2050 GMT
+api-oferta-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+api-oferta-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+api-oferta-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+api-oferta-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+api-oferta-prd	NAME
+default-token-fwdx5	Jul 16 16:37:25 2050 GMT
+api-oferta-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+api-otimizador-preco-prd	NAME
+via-tls	Jun 10 23:59:59 2024 GMT
+api-otimizador-preco-prd	NAME
+viavarejo-tls	Aug 12 23:59:59 2024 GMT
+api-preco-b2c-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+api-preco-b2c-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+api-preco-b2c-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+api-preco-b2c-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+api-preco-b2c-prd	NAME
+default-token-zr8qd	Jul 16 16:37:25 2050 GMT
+api-preco-b2c-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+api-preco-b2c-prd	NAME
+pontofrio-tls	Sep 12 23:59:59 2024 GMT
+api-preco-feed-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+api-preco-feed-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+api-preco-feed-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+api-preco-feed-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+api-preco-feed-prd	NAME
+default-token-7kt5z	Jul 16 16:37:25 2050 GMT
+api-preco-feed-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+api-preco-feed-prd	NAME
+pontofrio-tls	Sep 12 23:59:59 2024 GMT
+api-preco-frete-comercial-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+api-preco-frete-comercial-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+api-preco-frete-comercial-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+api-preco-frete-comercial-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+api-preco-frete-comercial-prd	NAME
+default-token-4gq4j	Jul 16 16:37:25 2050 GMT
+api-preco-frete-comercial-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+api-preco-frete-comercial-prd	NAME
+pontofrio-tls	Sep 12 23:59:59 2024 GMT
+api-preco-frete-comercial-prd	NAME
+via-tls	Jun 10 23:59:59 2024 GMT
+api-sharedservice-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+api-sharedservice-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+api-sharedservice-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+api-sharedservice-prd	NAME
+default-token-8vlwx	Jul 16 16:37:25 2050 GMT
+api-workflow-preco-prd	NAME
+default-token-5k6jb	Jul 16 16:37:25 2050 GMT
+api-workflow-preco-prd	NAME
+viavarejo-tls	Aug 12 23:59:59 2024 GMT
+consumer-preco-frete-comercial-prd	NAME
+api-casasbahia-tls	Aug  3 23:59:59 2024 GMT
+consumer-preco-frete-comercial-prd	NAME
+api-extra-tls	Aug  3 23:59:59 2024 GMT
+consumer-preco-frete-comercial-prd	NAME
+api-pontofrio-tls	Aug  3 23:59:59 2024 GMT
+consumer-preco-frete-comercial-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+consumer-preco-frete-comercial-prd	NAME
+default-token-xmxs4	Jul 16 16:37:25 2050 GMT
+consumer-preco-frete-comercial-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+consumer-preco-frete-comercial-prd	NAME
+pontofrio-tls	Sep 12 23:59:59 2024 GMT
+consumer-workflow-preco-prd	NAME
+default-token-c6r9z	Jul 16 16:37:25 2050 GMT
+consumer-workflow-preco-prd	NAME
+viavarejo-tls	Aug 12 23:59:59 2024 GMT
+default	NAME
+default-token-597jl	Jul 16 16:37:25 2050 GMT
+default	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+dynatrace	NAME
+default-token-xsfzp	Jul 16 16:37:25 2050 GMT
+dynatrace	NAME
+dynatrace-activegate-token-w4hdk	Jul 16 16:37:25 2050 GMT
+dynatrace	NAME
+dynatrace-dynakube-oneagent-unprivileged-token-447fn	Jul 16 16:37:25 2050 GMT
+dynatrace	NAME
+dynatrace-kubernetes-monitoring-token-pslgc	Jul 16 16:37:25 2050 GMT
+dynatrace	NAME
+dynatrace-monitoring-token-x8n5r	Jul 16 16:37:25 2050 GMT
+dynatrace	NAME
+dynatrace-oneagent-webhook-certs	Oct 30 01:24:53 2021 GMT
+dynatrace	NAME
+dynatrace-oneagent-webhook-certs	Nov  6 01:24:53 2020 GMT
+dynatrace	NAME
+dynatrace-operator-token-6tqtv	Jul 16 16:37:25 2050 GMT
+dynatrace	NAME
+dynatrace-webhook-certs	Jun  8 14:24:22 2024 GMT
+dynatrace	NAME
+dynatrace-webhook-certs	Jun 10 01:28:57 2023 GMT
+dynatrace	NAME
+dynatrace-webhook-certs	May 14 21:07:10 2024 GMT
+dynatrace	NAME
+dynatrace-webhook-token-kjbq8	Jul 16 16:37:25 2050 GMT
+front-desconto-online-prd	NAME
+casasbahia-tls	Sep 12 23:59:59 2024 GMT
+front-desconto-online-prd	NAME
+default-token-25k29	Jul 16 16:37:25 2050 GMT
+front-desconto-online-prd	NAME
+extra-tls	Sep 12 23:59:59 2024 GMT
+front-desconto-online-prd	NAME
+pontofrio-tls	Sep 12 23:59:59 2024 GMT
+front-frete-comercial-prd	NAME
+via-tls	Jun 10 23:59:59 2024 GMT
+front-gestao-da-oferta-prd	NAME
+default-token-d2pms	Jul 16 16:37:25 2050 GMT
+front-gestao-da-oferta-prd	NAME
+via-tls	Jun 10 23:59:59 2024 GMT
+front-otimizador-preco-prd	NAME
+via-tls	Jun 10 23:59:59 2024 GMT
+front-otimizador-preco-prd	NAME
+viavarejo-tls	Aug 12 23:59:59 2024 GMT
+front-precificacao-preco-prd	NAME
+via-tls	Jun 10 23:59:59 2024 GMT
+front-workflow-preco-prd	NAME
+default-token-khlc4	Jul 16 16:37:25 2050 GMT
+front-workflow-preco-prd	NAME
+via-tls	Jun 10 23:59:59 2024 GMT
+front-workflow-preco-prd	NAME
+viavarejo-tls	Aug 12 23:59:59 2024 GMT
+importador-price-prd	NAME
+default-token-v5bh7	Jul 16 16:37:25 2050 GMT
+ingress-nginx	NAME
+default-token-8kt7j	Jul 16 16:37:25 2050 GMT
+ingress-nginx	NAME
+nginx-ingress-serviceaccount-token-42n8f	Jul 16 16:37:25 2050 GMT
+ingress-nginx	NAME
+via-tls	Jun 10 23:59:59 2024 GMT
+ingress-nginx-external	NAME
+default-token-qpp9g	Jul 16 16:37:25 2050 GMT
+ingress-nginx-external	NAME
+nginx-ingress-serviceaccount-token-259c4	Jul 16 16:37:25 2050 GMT
+ingress-nginx-oferta	NAME
+default-token-w7l65	Jul 16 16:37:25 2050 GMT
+ingress-nginx-oferta	NAME
+nginx-ingress-serviceaccount-token-pxkh9	Jul 16 16:37:25 2050 GMT
+ingress-nginx-oferta	NAME
+nginx-ingress-serviceaccount-token-vd7mz	Jul 16 16:37:25 2050 GMT
+ingress-nginx-preco	NAME
+default-token-mqnjs	Jul 16 16:37:25 2050 GMT
+ingress-nginx-preco	NAME
+nginx-ingress-serviceaccount-token-p5rxt	Jul 16 16:37:25 2050 GMT
+integracao-revionics-prd	NAME
+default-token-wtrn8	Jul 16 16:37:25 2050 GMT
+kafka	NAME
+default-token-v7bcf	Jul 16 16:37:25 2050 GMT
+kafka	NAME
+viavarejo-tls	Aug 12 23:59:59 2024 GMT
+kafka-cluster	NAME
+default-token-m9ss2	Jul 16 16:37:25 2050 GMT
+kafka-cluster	NAME
+kafka-cluster-clients-ca-cert	Jan 29 04:07:13 2025 GMT
+kafka-cluster	NAME
+kafka-cluster-cluster-ca-cert	Jan 29 04:07:12 2025 GMT
+kafka-cluster	NAME
+kafka-cluster-cluster-operator-certs	Jan 28 19:57:01 2034 GMT
+kafka-cluster	NAME
+kafka-cluster-entity-operator-certs	Jan 30 15:25:24 2034 GMT
+kafka-cluster	NAME
+kafka-cluster-entity-operator-token-g7hhv	Jul 16 16:37:25 2050 GMT
+kafka-cluster	NAME
+kafka-cluster-kafka-brokers	Jan 26 05:11:39 2034 GMT
+kafka-cluster	NAME
+kafka-cluster-kafka-brokers	Jan 26 05:11:39 2034 GMT
+kafka-cluster	NAME
+kafka-cluster-kafka-brokers	Jan 26 05:11:39 2034 GMT
+kafka-cluster	NAME
+kafka-cluster-kafka-token-scjsr	Jul 16 16:37:25 2050 GMT
+kafka-cluster	NAME
+kafka-cluster-zookeeper-nodes	Jan 29 04:07:14 2025 GMT
+kafka-cluster	NAME
+kafka-cluster-zookeeper-nodes	Jan 29 04:07:14 2025 GMT
+kafka-cluster	NAME
+kafka-cluster-zookeeper-nodes	Jan 29 04:07:14 2025 GMT
+kafka-cluster	NAME
+kafka-cluster-zookeeper-token-2h5wv	Jul 16 16:37:25 2050 GMT
+kafka-operator	NAME
+default-token-kmclw	Jul 16 16:37:25 2050 GMT
+kafka-operator	NAME
+strimzi-cluster-operator-token-f8glp	Jul 16 16:37:25 2050 GMT
+kube-node-lease	NAME
+default-token-zw5dz	Jul 16 16:37:25 2050 GMT
+kube-public	NAME
+default-token-2w8hd	Jul 16 16:37:25 2050 GMT
+kube-system	NAME
+cloud-node-manager-token-2t7gl	Jul 16 16:37:25 2050 GMT
+kube-system	NAME
+coredns-autoscaler-token-nwxsm	Jul 16 16:37:25 2050 GMT
+kube-system	NAME
+coredns-token-6g98c	Jul 16 16:37:25 2050 GMT
+kube-system	NAME
+default-token-9px2t	Jul 16 16:37:25 2050 GMT
+kube-system	NAME
+konnectivity-agent-token-dhfrq	Jul 16 16:37:25 2050 GMT
+kube-system	NAME
+konnectivity-certs	Jul 16 16:37:25 2050 GMT
+kube-system	NAME
+konnectivity-certs	Feb 27 02:19:42 2026 GMT
+kube-system	NAME
+metrics-server-token-b46j6	Jul 16 16:37:25 2050 GMT
+kube-system	NAME
+omsagent-token-kx6nx	Jul 16 16:37:25 2050 GMT

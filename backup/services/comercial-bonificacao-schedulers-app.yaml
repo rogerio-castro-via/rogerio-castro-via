@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    app.via.com.br/branch: release/1.0.0
+    app.via.com.br/flag: via
+    app.via.com.br/nexus-url: https://nexus.viavarejo.com.br/repository/charts/comercial-bonificacao-schedulers-app/1.0.0-33/deploy-via-prd.yaml
+    app.via.com.br/project-name: comercial-bonificacao-schedulers-app
+    app.via.com.br/repository: comercial-bonificacao-schedulers-app
+    app.via.com.br/servicenow-task-number: CHG0307657
+    app.via.com.br/spinnaker: "true"
+    app.via.com.br/squad: Bonificação
+    app.via.com.br/tribe: Inteligência Comercial
+    app.via.com.br/version: 1.0.0-33
+    app.via.com.br/xl-release-start-date: Tue Mar 05 19:16:56 BRT 2024
+    app.via.com.br/xl-release-title: '[Bonificação] comercial-bonificacao-schedulers-app
+      - 1.0.0-33'
+    artifact.spinnaker.io/location: bonificacao-prd
+    artifact.spinnaker.io/name: comercial-bonificacao-schedulers-app
+    artifact.spinnaker.io/type: kubernetes/service
+    artifact.spinnaker.io/version: ""
+    moniker.spinnaker.io/application: bonificacao
+    moniker.spinnaker.io/cluster: service comercial-bonificacao-schedulers-app
+    strategy.spinnaker.io/versioned: "false"
+  labels:
+    app: comercial-bonificacao-schedulers-app
+    app.kubernetes.io/deployed-by: spinnaker-artifact-nexus
+    app.kubernetes.io/environment: prd
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: bonificacao
+    app.kubernetes.io/part-of: comercial-bonificacao-schedulers-app
+    app.kubernetes.io/project-name: comercial-bonificacao-schedulers-app
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 1.0.0-33
+  name: comercial-bonificacao-schedulers-app
+  namespace: bonificacao-prd
+spec:
+  clusterIP: 10.2.0.239
+  clusterIPs:
+  - 10.2.0.239
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    port: 8080
+  selector:
+    app: comercial-bonificacao-schedulers-app

@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: comercial-bonificacao-ngx
+  name: comercial-bonificacao-ngx
+  namespace: bonificacao-prd
+spec:
+  clusterIP: 10.2.0.72
+  clusterIPs:
+  - 10.2.0.72
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: 80-tcp
+    port: 80
+    targetPort: 8080
+  selector:
+    app: comercial-bonificacao-ngx
+    deploymentconfig: comercial-bonificacao-ngx

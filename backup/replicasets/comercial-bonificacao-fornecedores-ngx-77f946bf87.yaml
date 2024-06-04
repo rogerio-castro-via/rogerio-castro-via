@@ -1,0 +1,131 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    app.via.com.br/branch: release/2.0.0
+    app.via.com.br/flag: via
+    app.via.com.br/nexus-url: https://nexus.viavarejo.com.br/repository/charts/comercial-bonificacao-fornecedores-ngx/2.0.0-7/deploy-via-prd.yaml
+    app.via.com.br/project-name: comercial-bonificacao-fornecedores-ngx
+    app.via.com.br/repository: comercial-bonificacao-fornecedores-ngx
+    app.via.com.br/servicenow-task-number: CHG0282032
+    app.via.com.br/spinnaker: "true"
+    app.via.com.br/squad: Bonificação
+    app.via.com.br/tribe: Inteligência Comercial
+    app.via.com.br/version: 2.0.0-7
+    app.via.com.br/xl-release-start-date: Fri Sep 22 16:50:22 BRT 2023
+    app.via.com.br/xl-release-title: '[Bonificacao] comercial-bonificacao-fornecedores-ngx
+      - 2.0.0-7'
+    artifact.spinnaker.io/location: bonificacao-prd
+    artifact.spinnaker.io/name: comercial-bonificacao-fornecedores-ngx
+    artifact.spinnaker.io/type: kubernetes/deployment
+    artifact.spinnaker.io/version: ""
+    deployment.kubernetes.io/desired-replicas: "3"
+    deployment.kubernetes.io/max-replicas: "4"
+    deployment.kubernetes.io/revision: "55"
+    moniker.spinnaker.io/application: bonificacao
+    moniker.spinnaker.io/cluster: deployment comercial-bonificacao-fornecedores-ngx
+    strategy.spinnaker.io/versioned: "false"
+  labels:
+    app: comercial-bonificacao-fornecedores-ngx
+    app.kubernetes.io/deployed-by: spinnaker-artifact-nexus
+    app.kubernetes.io/environment: prd
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: bonificacao
+    app.kubernetes.io/part-of: comercial-bonificacao-fornecedores-ngx
+    app.kubernetes.io/project-name: comercial-bonificacao-fornecedores-ngx
+    app.kubernetes.io/stage: stable
+    app.kubernetes.io/version: 2.0.0-7
+    deploymentconfig: comercial-bonificacao-fornecedores-ngx
+    pod-template-hash: 77f946bf87
+  name: comercial-bonificacao-fornecedores-ngx-77f946bf87
+  namespace: bonificacao-prd
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: comercial-bonificacao-fornecedores-ngx
+      pod-template-hash: 77f946bf87
+  template:
+    metadata:
+      annotations:
+        app.via.com.br/branch: release/2.0.0
+        app.via.com.br/flag: via
+        app.via.com.br/nexus-url: https://nexus.viavarejo.com.br/repository/charts/comercial-bonificacao-fornecedores-ngx/2.0.0-7/deploy-via-prd.yaml
+        app.via.com.br/project-name: comercial-bonificacao-fornecedores-ngx
+        app.via.com.br/repository: comercial-bonificacao-fornecedores-ngx
+        app.via.com.br/servicenow-task-number: CHG0282032
+        app.via.com.br/spinnaker: "true"
+        app.via.com.br/squad: Bonificação
+        app.via.com.br/tribe: Inteligência Comercial
+        app.via.com.br/version: 2.0.0-7
+        app.via.com.br/xl-release-start-date: Fri Sep 22 16:50:22 BRT 2023
+        app.via.com.br/xl-release-title: '[Bonificacao] comercial-bonificacao-fornecedores-ngx
+          - 2.0.0-7'
+        artifact.spinnaker.io/location: bonificacao-prd
+        artifact.spinnaker.io/name: comercial-bonificacao-fornecedores-ngx
+        artifact.spinnaker.io/type: kubernetes/deployment
+        artifact.spinnaker.io/version: ""
+        automation.via/restartedAt: "2024-03-07T06:00:17.709743Z"
+        kubectl.kubernetes.io/restartedAt: "2023-10-20T00:14:11-03:00"
+        moniker.spinnaker.io/application: bonificacao
+        moniker.spinnaker.io/cluster: deployment comercial-bonificacao-fornecedores-ngx
+        strategy.spinnaker.io/versioned: "false"
+      creationTimestamp: null
+      labels:
+        app: comercial-bonificacao-fornecedores-ngx
+        app.kubernetes.io/deployed-by: spinnaker-artifact-nexus
+        app.kubernetes.io/environment: prd
+        app.kubernetes.io/managed-by: spinnaker
+        app.kubernetes.io/name: bonificacao
+        app.kubernetes.io/part-of: comercial-bonificacao-fornecedores-ngx
+        app.kubernetes.io/project-name: comercial-bonificacao-fornecedores-ngx
+        app.kubernetes.io/stage: stable
+        app.kubernetes.io/version: 2.0.0-7
+        deploymentconfig: comercial-bonificacao-fornecedores-ngx
+        pod-template-hash: 77f946bf87
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: comercial-bonificacao-fornecedores-ngx-kg65dcgh68
+        image: harbor01.viavarejo.com.br/bonificacao/bonificacao-prd/comercial-bonificacao-fornecedores-ngx:2.0.0-7
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 180
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 2
+        name: comercial-bonificacao-fornecedores-ngx
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+        resources:
+          limits:
+            cpu: 20m
+            memory: 50Mi
+          requests:
+            cpu: "0"
+            memory: "0"
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        agentpool: boniapp
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30

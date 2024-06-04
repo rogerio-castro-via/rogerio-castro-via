@@ -1,0 +1,11 @@
+b2b-admin-afiliados-front-hlg	via-tls	Jun 10 23:59:59 2024 GMT
+b2b-admin-afiliados-front-sdx	via-tls	Jun 10 23:59:59 2024 GMT
+b2b-admin-afiliados-front-sit	via-tls	Jun 10 23:59:59 2024 GMT
+b2b-admin-afiliados-front-stg	via-tls	Jun 10 23:59:59 2024 GMT
+b2b-admin-feed-front-hlg	via-tls	Jun 10 23:59:59 2024 GMT
+b2b-admin-feed-front-sdx	via-tls	Jun 10 23:59:59 2024 GMT
+b2b-admin-feed-front-sit	via-tls	Jun 10 23:59:59 2024 GMT
+b2b-admin-feed-front-stg	via-tls	Jun 10 23:59:59 2024 GMT
+b2b-afiliados-hlg	via-tls	Jun 10 23:59:59 2024 GMT
+b2b-afiliados-sdx	via-tls	Jun 10 23:59:59 2024 GMT
+b2b-afiliados-sit	via-tls	Jun 10 23:59:59 2024 GMT

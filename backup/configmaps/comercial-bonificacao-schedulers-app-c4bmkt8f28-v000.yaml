@@ -1,0 +1,27 @@
+apiVersion: v1
+data:
+  COMERCIAL_BONIFICACAO_API_LOGGER_REST_ENABLED: "false"
+  JVM_OPTS: -Xmx2G -Xms1536m
+  LOGGING_LEVEL_SPRING_SECURITY: TRACE
+  LOGGING_LEVEL_SPRING_WEB: TRACE
+  LOGGING_LEVEL_SPRING_WEB_FILTER: TRACE
+  LOGGING_LEVEL_VV: TRACE
+  SFTP_VV_REMOTE_DIRECTORY: /share3/Gestao\ de\ Verbas/SIT
+  VM_ARGS: -Dfile.encoding=UTF-8 -Duser.timezone=America/Buenos_Aires -Dspring.profiles.active=docker,scheduler
+kind: ConfigMap
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: bonificacao-prd
+    artifact.spinnaker.io/name: comercial-bonificacao-schedulers-app-c4bmkt8f28
+    artifact.spinnaker.io/type: kubernetes/configMap
+    artifact.spinnaker.io/version: v000
+    moniker.spinnaker.io/application: bonificacao
+    moniker.spinnaker.io/cluster: configMap comercial-bonificacao-schedulers-app-c4bmkt8f28
+    moniker.spinnaker.io/sequence: "0"
+  labels:
+    app: comercial-bonificacao-api
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: bonificacao
+    moniker.spinnaker.io/sequence: "0"
+  name: comercial-bonificacao-schedulers-app-c4bmkt8f28-v000
+  namespace: bonificacao-prd
