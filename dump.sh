@@ -7,7 +7,11 @@ executar_dump() {
     apt-get install -y wget
     wget -O dotnet-dump https://aka.ms/dotnet-dump/linux-x64
     chmod 777 ./dotnet-dump
+<<<<<<< HEAD
     ./dotnet-dump collect -p 1 --diag
+=======
+    ./dotnet-dump collect -p 1
+>>>>>>> 840ce14921b4ef465a1d2c2fdae9106109e96eed
 EOF
 }
 

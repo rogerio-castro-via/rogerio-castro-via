@@ -1,0 +1,429 @@
+<!doctype html>
+<!--[if IE]><html lang="en" class="ie"><![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MobaXterm free Xserver and tabbed SSH client for Windows</title>
+    <meta name="description" content="Free X server for Windows with tabbed SSH terminal, telnet, RDP, VNC, Xdmcp, Mosh and X11-forwarding. Portable or installer version." />
+    <meta name="keywords" content="X server, ssh, X11, Xserver, windows ssh client, putty, exceed, X11 forwarding, connect to linux, connect from windows to linux, remote linux desktop, mosh for windows, xdmcp, reflectionx, xwin32, sftp, rdp, vnc, portable, linux, unix, remote, puttycm, securecrt, secure crt, X11 server, Xorg, X.org, Xfree, mocha" />
+    <meta name="author" content="Mobatek" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@mobatek">
+    <meta name="twitter:creator" content="@mobatek">
+    <meta name="twitter:title" content="MobaXterm">
+    <meta name="twitter:description" content="The ultimate toolbox for remote computing - includes X server, enhanced SSH client and much more!">
+    <meta name="twitter:image:src" content="https://mobaxterm.mobatek.net/screenshot.png">
+    <meta property="og:title" content="MobaXterm free Xserver and tabbed SSH client for Windows" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mobaxterm.mobatek.net/" />
+    <meta property="og:image" content="https://mobaxterm.mobatek.net/screenshot.png" />
+    <meta property="og:description" content="The ultimate toolbox for remote computing - includes X server, enhanced SSH client and much more!" />
+    <link rel="canonical" href="https://mobaxterm.mobatek.net/" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="alternate" type="application/rss+xml" title="Mobatek RSS feed" href="https://blog.mobatek.net/index.xml" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="css/mobastyles.css" rel="stylesheet" media="screen">
+    <link href="css/moba.css" rel="stylesheet" media="screen">
+    <!--<script src="js/libs/modernizr.js"></script>-->
+    <!--[if lt IE 9]>
+      <script src="js/libs/respond.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+  
+    <div id="off-canvas-wrap" class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+      
+        <aside class="left-off-canvas-menu">
+          <div class="mobile-navi">
+            <ul class="buttons">
+              <li><a href="https://ccc.mobatek.net">Customer login</a></li>
+            </ul>
+            <ul>
+              <li class="current"><a href="/">Home</a></li>
+              <li><a href="/demo.html">Demo</a></li>
+              <li><a href="/features.html">Features</a></li>
+              <li><a href="/download.html">Download</a></li>
+              <li><a href="/plugins.html">Plugins</a></li>
+              <li><a href="/documentation.html">Help</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </aside>
+        
+
+        <div class="site-layout boxed">
+        
+          <div class="header_background">
+          </div>
+          <header id="mobaheader" class="header sticky">
+            <div class="inner">
+              <div class="container group">
+                <a href="/" class="logo">
+                  <div class="mobalogoimg">
+                    <img width=48 height=48 src="img/moba/xterm_logo.png" alt="MobaXterm"/>
+                  </div>                        
+                  <div class="mobalogotxt">
+                    MobaXterm
+                  </div>                        
+                </a>
+                <div onclick="toggleMobileMenu();" class="left-off-canvas-toggle" id="nav-toggle">
+                  <span></span>
+                </div>
+                <div class="navigation">
+                  <nav class="menu">
+                    <ul>
+                      <li class="active"><a href="/">Home</a></li>
+                      <li><a href="/demo.html">Demo</a></li>
+                      <li><a href="/features.html">Features</a></li>
+                      <li><a href="/download.html">Download</a></li>
+                      <li><a href="/plugins.html">Plugins</a></li>
+                      <li><a href="/documentation.html">Help</a></li>
+                      <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                  </nav>
+                  <div class="socials_haut">
+                    <a target="_blank" href="https://www.facebook.com/plugins/like.php?href=https://mobaxterm.mobatek.net/">
+                      <div class="socialicon socialsmall fbicon">
+                        <i class="tooltipped fa fa-facebook" data-placement="bottom" title="Like us on Facebook"></i>
+                      </div>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fmobaxterm.mobatek.net%2F&amp;region=follow_link&amp;screen_name=mobatek&amp;tw_p=followbutton">
+                      <div class="socialicon socialsmall tticon">
+                        <i class="tooltipped fa fa-twitter" data-placement="bottom" title="Follow us on Twitter"></i>
+                      </div>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fmobaxterm.mobatek.net%2F&amp;text=Download%20%23MobaXterm%20free%20X%20server%20and%20SSH%20client%20for%20Windows%20with%20RDP%2C%20VNC%2C%20telnet%20and%20many%20other%20Linux%20tools!%20&amp;tw_p=tweetbutton&amp;url=http%3A%2F%2Fmobaxterm.mobatek.net%2F">
+                      <div class="socialicon socialsmall tticon">
+                        <i class="tooltipped fa fa-comment" data-placement="bottom" title="Send a Tweet about MobaXterm"></i>
+                      </div>
+                    </a>
+                    <a target="_blank" href="https://blog.mobatek.net">
+                      <i class="tooltipped fa fa-users" data-placement="bottom" title="Mobatek blog"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="tools group">          
+                  <a class="signup pull-left" href="https://ccc.mobatek.net">Customer area</a>
+                  <a class="signup pull-left" href="/download.html">Buy</a>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          
+
+
+          <div class="page">
+            
+            <section class="mobatitre">
+              <div class="page-heading center">
+                <h1>MobaXterm</h1>
+                <h3>Enhanced terminal for Windows with X11 server, tabbed SSH client, network tools and much more</h3>
+              </div>
+
+              <div class="mobaslider">
+                <div class="mobaslider" style="margin: 0 16px 0 16px;">
+                  <div id="img1">
+                    <img width="1170" height="474" src="img/slider/MobaXterm-icon.png" alt="MobaXterm Xserver, SSH, RDP, Mstsc, Mosh for Windows" />
+                  </div>
+                  <div id="img2" class="mobasliderimg" style="opacity: 0; left: 16px; top: 16px; width: 768px; height: 443px;">
+                    <img width="768" height="443" src="img/slider/MobaXterm.png" alt="MobaXterm terminal" />
+                  </div>
+                  <div id="img4" class="mobasliderimg" style="left: 1200px; top: 36px; width: 180px; height: 203px;">
+                    <img width="180" height="203" src="img/slider/Xclock.png" alt="MobaXterm X server" />
+                  </div>
+                  <div id="img5" class="mobasliderimg" style="left: -800px; top: 8px; width: 656px; height: 325px;">
+                    <img width="656" height="325" src="img/slider/Emacs.png" alt="Emacs X11 display" />
+                  </div>
+                  <div id="img3" class="mobasliderimg" style="left: 216px; top: 680px; width: 253px; height: 287px;">
+                    <img width="253" height="287" src="img/slider/X11-OpenGL.gif" alt="X server with OpenGL" />
+                  </div>
+                  <div id="img6" class="mobasliderimg" style="left: 1200px; top: 16px; width: 768px; height: 377px;">
+                    <img width="768" height="377" src="img/slider/Network-sessions.png" alt="Network sessions (SSH, RDP, SFTP, Telnet, Rsh, rlogin, mosh, VNC, Xdmcp)" />
+                  </div>
+                  <div id="img9" class="mobasliderimg" style="opacity: 0; left: 16px; top: 16px; width: 768px; height: 443px;">
+                    <img width="768" height="443" src="img/slider/RDP.png" alt="RDP, Rdesktop Mstsc client" />
+                  </div>
+                  <div id="img10" class="mobasliderimg" style="left: -1200px; top: 8px; width: 574px; height: 317px;">
+                    <img width="574" height="317" src="img/slider/Remote-Unix-Xdmcp.png" alt="Xdmcp remote X11 desktop" />
+                  </div>
+                  <div id="img11" class="mobasliderimg" style="left: 1200px; top: 16px; width: 768px; height: 443px;">
+                    <img width="768" height="443" src="img/slider/Cool-features.png" alt="Dark mode" />
+                  </div>
+                  <div id="img12" class="mobasliderimg" style="opacity: 0; left: 16px; top: 16px; width: 768px; height: 443px;">
+                    <img width="768" height="443" src="img/slider/Cool-feature-ssh-browser.png" alt="Graphical SSH-browser" />
+                  </div>
+                  <div id="img13" class="mobasliderimg" style="opacity: 0; left: 16px; top: 16px; width: 768px; height: 443px;">
+                    <img width="768" height="443" src="img/slider/Cool-feature-remote-monitoring.png" alt="Remote-monitoring bar" />
+                  </div>
+                  <div id="img14" class="mobasliderimg" style="opacity: 0; left: 16px; top: 16px; width: 768px; height: 443px;">
+                    <img width="768" height="443" src="img/slider/Cool-feature-syntax-highlighting.png" alt="Terminal syntax highlighting" />
+                  </div>
+                </div>
+                
+                <a href="#" onclick="StepBackward(); return false;">
+                  <div class="slider_fleches" style="position: absolute; left: 0px; top: 0px; height: 100%; width: 240px;">
+                    <i class="fa fa-chevron-left" style="position: absolute; top: 48%; left: 8px; font-size: 24px;"></i>
+                  </div>
+                </a>
+                <a href="#" onclick="StepForward(); return false;">
+                  <div class="slider_fleches" style="text-align: right; position: absolute; right: 0px; top: 0px; height: 100%; width: 240px;">
+                    <i class="fa fa-chevron-right" style="position: absolute; top: 48%; right: 8px; font-size: 24px;"></i>
+                  </div>
+                </a>
+                            
+              </div>
+              <div class="ms-info center" style="padding-top: 16px;"><p id="diapotitle">Get your ultimate toolbox for remote computing now</p></div>
+            	<div class="space-top"><a class="btn_orange" href="/download.html"><i class="fa fa-download btn_icon"></i>GET MOBAXTERM NOW!</a></div>
+            </section>
+
+
+
+
+            <section class="page-block space-top double-padding-bottom">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 center-mobile">
+                    <div class="page-heading center">
+                      <h3>MobaXterm X server and SSH client<span></span></h3>
+                    </div>
+                    <p>MobaXterm is your <b>ultimate toolbox for remote computing</b>. In a single Windows application, it provides loads of functions that are tailored for programmers, webmasters, IT administrators and pretty much all users who need to handle their remote jobs in a more simple fashion.</p>
+                    <p>MobaXterm provides all the important <b>remote network tools</b> (SSH, X11, RDP, VNC, FTP, MOSH, ...) and <b>Unix commands</b> (bash, ls, cat, sed, grep, awk, rsync, ...) to Windows desktop, in a <b>single portable exe file</b> which works out of the box. <a href="/features.html">More info on supported network protocols</a></p>
+                    <p>There are many advantages of having an <b>All-In-One network application</b> for your remote tasks, e.g. when you use <b>SSH</b> to connect to a remote server, a graphical <b>SFTP browser</b> will automatically pop up in order to directly edit your remote files. Your remote applications will also display seamlessly on your Windows desktop using the embedded <b>X server</b>. <a href="/demo.html">See demo</a></p>                  
+                    <p>You can download and use MobaXterm Home Edition for free. If you want to use it inside your company, you should consider subscribing to MobaXterm Professional Edition: this will give you access to much more features and the "Customizer" software. <a href="/download.html">Features comparison</a></p>
+                    <p>When developing MobaXterm, we focused on a simple aim: proposing an <b>intuitive user interface</b> in order for you to <b>efficiently access remote servers</b> through different networks or systems. <a href="/features.html">Screenshots</a></p>
+                    <p>MobaXterm is being actively developed and frequently updated by <a target="_blank" href="https://www.mobatek.net">Mobatek</a>.</p>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <div class="page-heading center">
+                      <h3>Key features<span></span></h3>
+                    </div>
+                    <div class="row icon-block key_feature">
+                      <div class="col-lg-2 col-md-2 col-sm-2 key_feature_icon">
+                        <i class="fa fa-gears"></i>
+                      </div>
+                      <div class="col-md-10 col-sm-10 key_feature_text">
+                        <h5>Embedded X server</h5>
+                        <p>Fully configured Xserver based on X.org</p>
+                      </div>
+                    </div>
+                    <div class="row icon-block key_feature">
+                      <div class="col-lg-2 col-md-2 col-sm-2 key_feature_icon">
+                        <i class="fa fa-image"></i>
+                      </div>
+                      <div class="col-md-10 col-sm-10 key_feature_text">
+                        <h5>Easy DISPLAY exportation</h5>
+                        <p>DISPLAY is exported from remote Unix to local Windows</p>
+                      </div>
+                    </div>
+                    <div class="row icon-block key_feature">
+                      <div class="col-lg-2 col-md-2 col-sm-2 key_feature_icon">
+                        <i class="fa fa-code-fork"></i>
+                      </div>
+                      <div class="col-md-10 col-sm-10 key_feature_text">
+                        <h5>X11-Forwarding capability</h5>
+                        <p>Your remote display uses SSH for secure transport</p>
+                      </div>
+                    </div>
+                    <div class="row icon-block key_feature">
+                      <div class="col-lg-2 col-md-2 col-sm-2 key_feature_icon">
+                        <i class="fa fa-terminal"></i>
+                      </div>
+                      <div class="col-md-10 col-sm-10 key_feature_text">
+                        <h5>Tabbed terminal with SSH</h5>
+                        <p>Based on PuTTY with antialiased fonts and macro support</p>
+                      </div>
+                    </div>
+                    <div class="row icon-block key_feature">
+                      <div class="col-lg-2 col-md-2 col-sm-2 key_feature_icon">
+                        <i class="fa fa-linux"></i>
+                      </div>
+                      <div class="col-md-10 col-sm-10 key_feature_text">
+                        <h5>Many Unix/Linux commands on Windows</h5>
+                        <p>Basic Cygwin commands (bash, grep, awk, sed, rsync,...)</p>
+                      </div>
+                    </div>
+                    <div class="row icon-block key_feature">
+                      <div class="col-lg-2 col-md-2 col-sm-2 key_feature_icon">
+                        <i class="fa fa-puzzle-piece"></i>
+                      </div>
+                      <div class="col-md-10 col-sm-10 key_feature_text">
+                        <h5>Add-ons and plugins</h5>
+                        <p>You can extend MobaXterm capabilities with plugins</p>
+                      </div>
+                    </div>
+                    <div class="row icon-block key_feature">
+                      <div class="col-lg-2 col-md-2 col-sm-2 key_feature_icon">
+                        <i class="fa fa-sitemap"></i>
+                      </div>
+                      <div class="col-md-10 col-sm-10 key_feature_text">
+                        <h5>Versatile session manager</h5>
+                        <p>All your network tools in one app: Rdp, Vnc, Ssh, Mosh, X11, ...</p>
+                      </div>
+                    </div>
+                    <div class="row icon-block key_feature">
+                      <div class="col-lg-2 col-md-2 col-sm-2 key_feature_icon">
+                        <i class="fa fa-code"></i>
+                      </div>
+                      <div class="col-md-10 col-sm-10 key_feature_text">
+                        <h5>Portable and light application</h5>
+                        <p>MobaXterm has been packaged as a single executable which does not require admin rights and which you can start from an USB stick</p>
+                      </div>
+                    </div>
+                    <div class="row icon-block key_feature">
+                      <div class="col-lg-2 col-md-2 col-sm-2 key_feature_icon">
+                        <i class="fa fa-group"></i>
+                      </div>
+                      <div class="col-md-10 col-sm-10 key_feature_text">
+                        <h5>Professional application</h5>
+                        <p>MobaXterm Professional has been designed for security and stability</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+                      
+
+
+
+            <section class="page-block space-bottom">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6 col-sm-6">
+                    <a class="no_text_decoration center" href="/features.html">
+                      <div class="mobadiapo">
+                        <div class="font_grise">
+                          <h4>Network toolbox</h4>
+                          <p class="texte_serre">Ssh, telnet, rsh, vnc, rdp, sftp, xdmcp, mosh and many network tools in a single application</p>
+                          <img width=240 height=160 class="center" style="width: 240px; height: auto;" src="img/moba/home/xterm_session_manager.png" alt="Network toolbox"/>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <a class="no_text_decoration center" href="/demo.html">
+                      <div class="mobadiapo">
+                        <div class="font_grise">
+                          <h4>X server</h4>
+                          <p class="texte_serre">The embedded X server allows remote programs to be displayed on your Windows computer</p>
+                          <img width=240 height=160 class="center" style="width: 240px; height: auto;" src="img/moba/home/xterm_xserver.png" alt="X server"/>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <a class="no_text_decoration center" href="/features.html">
+                      <div class="mobadiapo">
+                        <div class="font_grise">
+                          <h4>Network security</h4>
+                          <p class="texte_serre">Graphical applications and file transfers can be encrypted using secured SSH connections</p>
+                          <img width=240 height=160 class="center" style="width: 240px; height: auto;" src="img/moba/home/xterm_network_security.png" alt="Network security"/>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <a class="no_text_decoration center" href="/download.html">
+                      <div class="mobadiapo">
+                        <div class="font_grise">
+                          <h4>Professional Edition</h4>
+                          <p class="texte_serre">Unleash more MobaXterm features and customization capabilities</p>
+                          <img width=240 height=160 class="center" style="width: 240px; height: auto;" src="img/moba/home/xterm_pro.png" alt="Professional Edition"/>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+        
+
+
+          <footer class="footer">
+            <div class="container" style="background: #606060; padding: 16px 16px 16px 16px; margin: 0 0 0 0; width: 100%;">
+              <div class="row">                
+                <div class="col-md-4 col-sm-4">
+                  <div class="col-md-4 col-sm-4">
+                    <div class="bubulle" style="background-image: url(img/moba/home/x11-opengl.png);"></div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 font_blanche">
+                    MobaXterm Xserver includes OpenGL capabilities allowing users to display their remote applications on local computer for productivity increase.
+                  </div>  
+                </div>
+                <div class="col-md-4 col-sm-4">
+                  <div class="col-md-4 col-sm-4">
+                    <div class="bubulle" style="background-image: url(img/moba/home/secure-network-protocols.png);"></div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 font_blanche">
+                    Because security is critical for your network, use secured protocols embedded in MobaXterm (SSH, SFTP, ...). MobaXterm brings latest technology to secure your network.
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                  <div class="col-md-4 col-sm-4">
+                    <div class="bubulle" style="background-image: url(img/moba/home/portable-software.png);"></div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 font_blanche">
+                    Portable version available.<br />No administration rights or additional framework/libraries needed.<br /> You can launch it directly from your USB drive.
+                  </div>
+                </div>                
+              </div>
+            </div>
+
+            <div class="copyright">
+              <div class="col-md-3 col-sm-3" style="padding-top: 12px;">
+                <p><a href="https://www.mobatek.net/aboutus.html" target="_blank">About us</a> | <a href="/license.html" target="_blank">Home License</a> |  <a href="/MobaXterm-Pro-General-Terms-and-Conditions.pdf" target="_blank">Pro License</a> |  <a href="/MobaXterm-Pro-General-Terms-and-Conditions.pdf" target="_blank">Terms&Conditions</a> | <a href="/export_rules.html" target="_blank">Export rules</a></p>
+              </div>
+              <div class="col-md-6 col-sm-6" style="padding-top: 12px;">
+                <p>&copy; 2008 - 2024 Mobatek.  <a href="/">MobaXterm</a>&reg; is a registered trademark of <a href="https://www.mobatek.net" target="_blank">Mobatek</a></p>
+              </div>
+              <div class="col-md-3 col-sm-3" style="text-align: right;">
+                <div class="contacts">
+                  <div class="socials_bas">
+                    <a target="_blank" href="https://www.facebook.com/plugins/like.php?href=https://mobaxterm.mobatek.net/">
+                      <div class="socialicon socialbig fbicon">
+                        <i class="tooltipped fa fa-facebook" data-placement="bottom" title="Like us on Facebook"></i>
+                      </div>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fmobaxterm.mobatek.net%2F&amp;region=follow_link&amp;screen_name=mobatek&amp;tw_p=followbutton">
+                      <div class="socialicon socialbig tticon">
+                        <i class="tooltipped fa fa-twitter" data-placement="bottom" title="Follow us on Twitter"></i>
+                      </div>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fmobaxterm.mobatek.net%2F&amp;text=Download%20%23MobaXterm%20free%20X%20server%20and%20SSH%20client%20for%20Windows%20with%20RDP%2C%20VNC%2C%20telnet%20and%20many%20other%20Linux%20tools!%20&amp;tw_p=tweetbutton&amp;url=http%3A%2F%2Fmobaxterm.mobatek.net%2F">
+                      <div class="socialicon socialbig tticon">
+                        <i class="tooltipped fa fa-comment" data-placement="bottom" title="Send a Tweet about MobaXterm"></i>
+                      </div>
+                    </a>
+                    <a target="_blank" href="https://blog.mobatek.net">
+                      <i class="tooltipped fa fa-users" data-placement="bottom" title="Mobatek blog"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        
+        </div>
+        
+        <a class="exit-off-canvas"></a>
+      </div>
+    </div>
+          
+    <div id="mobastickybtns" class="sticky-btns">
+      <a href="#"><span><i class="fa fa-chevron-up"></i></span></a>
+    </div>
+
+    <script src="js/mobascripts.js"></script>
+		<script src="js/mobaxterm/slider02.js"></script>
+    <script>
+      StepForward();
+    </script>
+
+  </body>
+</html>

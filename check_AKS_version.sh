@@ -40,6 +40,7 @@ subscriptions=(
     "b5fe7cea-c22d-4ac6-a22b-7c740dbbe4e5"
 )
 
+<<<<<<< HEAD
 # Resource Groups
 resource_groups=(
     "rg-mktplace-app-prd"
@@ -59,6 +60,11 @@ resource_groups=(
     "rg-adanalytics-app-hlg"
     "rg-marketplace-app-hlg"
 )
+=======
+clusters=("akspriv-pricing-hlg" "akspriv-intcomercial-hlg" "akspriv-feed-hlg" "akspriv-cupom-omni-hlg" "akspriv-bonificacao-hlg" "akspriv-adanalytics-hlg" "akspriv-mktponboarding-hlg" "akspriv-marketplace-hlg")
+subscriptions=("b5fe7cea-c22d-4ac6-a22b-7c740dbbe4e5" "b5fe7cea-c22d-4ac6-a22b-7c740dbbe4e5" "b5fe7cea-c22d-4ac6-a22b-7c740dbbe4e5" "b5fe7cea-c22d-4ac6-a22b-7c740dbbe4e5" "be2ab514-98fa-41a5-9a21-3d4928ee6112" "be2ab514-98fa-41a5-9a21-3d4928ee6112" "b5fe7cea-c22d-4ac6-a22b-7c740dbbe4e5" "b5fe7cea-c22d-4ac6-a22b-7c740dbbe4e5")
+resource_groups=("rg-pricing-app-hlg" "rg-intcomercial-app-hlg" "rg-feed-app-hlg" "rg-cupom-omni-app-hlg" "rg-bonificacao-app-hlg" "rg-adanalytics-app-hlg" "rg-mktponboarding-app-hlg" "rg-marketplace-app-hlg")
+>>>>>>> 840ce14921b4ef465a1d2c2fdae9106109e96eed
 
 for i in "${!clusters[@]}"; do
     az account set --subscription "${subscriptions[$i]}" &>/dev/null
